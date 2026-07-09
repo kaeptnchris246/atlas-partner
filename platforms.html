@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>แพลตฟอร์ม AI ของเรา · Our AI Platforms — Euphena × ATLAS</title>
+<style>
+  :root{--bg:#05070f;--cyan:#22d3ee;--violet:#a78bff;--pv:#7c3aed;--ink:#eaf2ff;--mut:#93a4c8;--card:rgba(255,255,255,.04);--line:rgba(120,160,255,.14)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Helvetica Neue",Arial,"Thonburi","Leelawadee UI",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.65}
+  #bg{position:fixed;inset:0;z-index:0}
+  .glow{position:fixed;z-index:1;pointer-events:none;filter:blur(90px);opacity:.5}
+  .g1{top:-10%;left:-8%;width:48vw;height:48vw;background:radial-gradient(circle,rgba(34,211,238,.32),transparent 60%)}
+  .g2{bottom:-15%;right:-10%;width:52vw;height:52vw;background:radial-gradient(circle,rgba(124,58,237,.32),transparent 60%)}
+  .wrap{position:relative;z-index:3;max-width:1080px;margin:0 auto;padding:0 24px}
+  nav{position:fixed;top:0;left:0;right:0;z-index:20;backdrop-filter:blur(12px);background:linear-gradient(180deg,rgba(5,7,15,.88),rgba(5,7,15,.3));border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1080px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:800;letter-spacing:2px;font-size:14px}.brand b{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .back{color:var(--mut);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:8px 15px;border-radius:999px}
+  .back:hover{color:var(--cyan);border-color:var(--cyan)}
+  header{padding:150px 0 60px;text-align:center}
+  .kick{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line);border-radius:999px;padding:7px 15px;margin-bottom:22px;background:rgba(34,211,238,.06)}
+  h1{font-size:clamp(34px,6vw,60px);line-height:1.08;font-weight:800;letter-spacing:-1px}
+  h1 .g{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .en{color:var(--mut)}
+  header .sub{max-width:640px;margin:22px auto 0;font-size:17px;color:var(--mut)}
+  header .sub .en{display:block;font-size:14px;margin-top:6px}
+  .plats{display:flex;flex-direction:column;gap:22px;padding:30px 0 20px}
+  .plat{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;display:grid;grid-template-columns:66px 1fr;gap:22px;opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .plat.in{opacity:1;transform:none}
+  .plat:hover{border-color:rgba(34,211,238,.4)}
+  .picon{width:66px;height:66px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:34px;background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(124,58,237,.15));border:1px solid var(--line)}
+  .pname{font-size:23px;font-weight:800}
+  .pcat{color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+  .pdesc{margin-top:12px;font-size:15px}
+  .pdesc .en{display:block;margin-top:6px;font-size:13.5px}
+  .feats{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .feat{font-size:12px;color:var(--ink);background:rgba(34,211,238,.08);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+  .feat b{color:var(--cyan)}
+  @media(max-width:640px){.plat{grid-template-columns:1fr}.picon{width:56px;height:56px;font-size:28px}}
+  .final{text-align:center;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(34,211,238,.12));border:1px solid var(--line);border-radius:26px;padding:56px 28px;margin:30px 0 60px}
+  .final h2{font-size:clamp(26px,4.5vw,40px);font-weight:800}
+  .final p{color:var(--mut);max-width:600px;margin:16px auto 0}
+  .final p .en{display:block;font-size:14px;margin-top:6px}
+  .btn{display:inline-block;margin-top:26px;background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;font-weight:800;padding:14px 28px;border-radius:12px;text-decoration:none}
+  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mut);font-size:13px;text-align:center;position:relative;z-index:3}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas><div class="glow g1"></div><div class="glow g2"></div>
+
+<nav><div class="nav-in">
+  <div class="brand">EUPHENA <b>× ATLAS</b></div>
+  <a class="back" href="./index.html">← กลับ / Back</a>
+</div></nav>
+
+<header><div class="wrap">
+  <span class="kick">AI Platforms · Real Products</span>
+  <h1>แพลตฟอร์ม AI <span class="g">ที่เราสร้างจริง</span></h1>
+  <h1 class="en" style="font-size:clamp(18px,3vw,26px);margin-top:8px">The intelligent AI platforms we build</h1>
+  <p class="sub">ทุกแพลตฟอร์มด้านล่างมี “AI อัจฉริยะ” อยู่ข้างใน — และเราสร้างแบบนี้ให้ลูกค้าของคุณได้เช่นกัน นี่คือสิ่งที่คุณสามารถเสนอขายได้จริง
+    <span class="en">Every platform below has real, intelligent AI inside — and we can build one like this for your customers too. This is what you can actually offer.</span></p>
+</div></header>
+
+<section class="wrap"><div class="plats">
+
+  <div class="plat"><div class="picon">💞</div><div>
+    <div class="pname">LUMI</div><div class="pcat">Dating & Matching App</div>
+    <div class="pdesc">แอปหาคู่ยุคใหม่ที่ AI ช่วยจับคู่คนที่ “ใช่” จริง ๆ — ไม่ใช่แค่หน้าตา แต่ดูค่านิยม ไลฟ์สไตล์ และโปรไฟล์ทางวัฒนธรรม มีระบบแปลภาษาในแชท เพื่อให้คนต่างภาษาคุยกันได้ พร้อมระบบความปลอดภัย (บล็อก/รายงาน, ยืนยันอายุ)
+      <span class="en">A modern dating app where AI matches people who truly fit — by values, lifestyle and cultural profile, not just looks. In-chat translation lets people across languages connect, with full safety (block/report, age verification).</span></div>
+    <div class="feats"><span class="feat"><b>AI</b> จับคู่อัจฉริยะ</span><span class="feat"><b>AI</b> แปลภาษาในแชท</span><span class="feat">โปรไฟล์วัฒนธรรม</span><span class="feat">ความปลอดภัย</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">🛡️</div><div>
+    <div class="pname">Vigenyx <span style="color:var(--mut);font-size:16px">(VGX)</span></div><div class="pcat">Security & Safety Operations Platform</div>
+    <div class="pdesc">แพลตฟอร์มบริหารความปลอดภัยระดับองค์กร — จัดการทีมรักษาความปลอดภัย ติดตามตำแหน่ง GPS ของเจ้าหน้าที่ สแกนตั๋ว/บัตร บันทึกเหตุการณ์และอินซิเดนต์แบบเรียลไทม์ พร้อมระบบแยกข้อมูลแต่ละองค์กรอย่างปลอดภัย (multi-tenant) เหมาะกับบริษัทรักษาความปลอดภัย อีเวนต์ และศูนย์ควบคุม
+      <span class="en">An enterprise security-operations platform — manage guard teams, track officer GPS, scan tickets/passes, log incidents and events in real time, with secure per-organization data isolation. Built for security firms, events and control centers.</span></div>
+    <div class="feats"><span class="feat"><b>AI</b> เฝ้าระวังเรียลไทม์</span><span class="feat">GPS เจ้าหน้าที่</span><span class="feat">สแกนตั๋ว/อินซิเดนต์</span><span class="feat">Multi-Tenant ปลอดภัย</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">🦅</div><div>
+    <div class="pname">BlackEagle</div><div class="pcat">Crypto Trading Bot System</div>
+    <div class="pdesc">ระบบเทรดคริปโตอัตโนมัติ — บอทที่รันกลยุทธ์เอง เช่น กริดเทรด พร้อมการทดสอบย้อนหลัง (backtest) ก่อนใช้จริง ถ้าคุณสนใจตลาดการเงิน Christian จะสอนและช่วยคุณทีละขั้น หมายเหตุสำคัญ: การเทรดต้องเรียนรู้และมีความเสี่ยงเสมอ ไม่ใช่รายได้ที่การันตี
+      <span class="en">An automated crypto-trading system — bots that run strategies (e.g. grid trading) with backtesting before going live. If markets interest you, Christian teaches and supports you step by step. Important: trading takes learning and always carries risk — never a guaranteed income.</span></div>
+    <div class="feats"><span class="feat"><b>AI</b> กลยุทธ์อัตโนมัติ</span><span class="feat">Grid Bots</span><span class="feat">Backtesting</span><span class="feat">มีคนสอน</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">⚖️</div><div>
+    <div class="pname">LEXIQ</div><div class="pcat">Legal AI Assistant</div>
+    <div class="pdesc">ผู้ช่วย AI สำหรับสำนักงานกฎหมาย — ช่วยค้นหาข้อมูลคดี ร่างเอกสาร รับเรื่องลูกความเบื้องต้น และให้การประเมินทางกฎหมายขั้นต้น ทำให้ทนายทำงานเร็วขึ้นและลูกความเข้าถึงง่ายขึ้น
+      <span class="en">An AI assistant for law firms — helps search cases, draft documents, handle client intake and give a legal first-assessment, so lawyers work faster and clients get help more easily.</span></div>
+    <div class="feats"><span class="feat"><b>AI</b> ค้นหาคดี</span><span class="feat"><b>AI</b> ร่างเอกสาร</span><span class="feat">ประเมินขั้นต้น</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">🌿</div><div>
+    <div class="pname">Mira</div><div class="pcat">Health & Wellness Coach</div>
+    <div class="pdesc">แอปโค้ชสุขภาพส่วนตัว — วิเคราะห์มื้ออาหารจากรูปถ่าย ติดตามพฤติกรรมและเป้าหมาย พร้อมโค้ช AI ที่พูดคุยและให้กำลังใจแบบเฉพาะบุคคล
+      <span class="en">A personal health-coach app — analyzes meals from photos, tracks habits and goals, with an AI coach that chats and motivates you personally.</span></div>
+    <div class="feats"><span class="feat"><b>AI</b> วิเคราะห์มื้ออาหาร</span><span class="feat"><b>AI</b> โค้ชส่วนตัว</span><span class="feat">ติดตามเป้าหมาย</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">📊</div><div>
+    <div class="pname">Dotiva</div><div class="pcat">Sales & CRM Platform — your cockpit</div>
+    <div class="pdesc">แพลตฟอร์มขายและ CRM ที่คุณจะใช้ทำงานเอง — รวมลูกค้าทั้งหมด กล่องข้อความหลายช่องทาง (อีเมล/WhatsApp/Telegram/โทร) งานที่ AI สร้างจากอีเมลอัตโนมัติ พร้อมร่างคำตอบ และติดตามดีล/รายได้ ทั้งหมดในที่เดียว
+      <span class="en">The sales & CRM platform you'll actually work in — all your customers, a multi-channel inbox (email/WhatsApp/Telegram/calls), AI-generated tasks from emails with draft replies, and deal/earnings tracking, all in one place.</span></div>
+    <div class="feats"><span class="feat"><b>AI</b> เขียนข้อความ</span><span class="feat">Inbox หลายช่องทาง</span><span class="feat"><b>AI</b> สร้างงานจากอีเมล</span><span class="feat">ติดตามดีล</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">🤝</div><div>
+    <div class="pname">Clara</div><div class="pcat">AI Companion & Assistant</div>
+    <div class="pdesc">แอปผู้ช่วยและเพื่อน AI ที่เป็นมิตร — พูดคุย ช่วยเหลือ และอยู่เคียงข้างผู้ใช้ในแต่ละวัน แสดงให้เห็นว่าเราสร้าง AI ที่ “มีบุคลิก” และเข้าใจผู้คนได้
+      <span class="en">A friendly AI companion & assistant app — chats, helps and stays by the user's side day to day. It shows we can build AI with personality that understands people.</span></div>
+    <div class="feats"><span class="feat"><b>AI</b> สนทนา</span><span class="feat">ผู้ช่วยส่วนตัว</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">🎓</div><div>
+    <div class="pname">Zori</div><div class="pcat">Learning & Education Platform</div>
+    <div class="pdesc">แพลตฟอร์มเรียนออนไลน์ — คอร์ส บทเรียน และศูนย์การเรียนรู้ พร้อมติดตามความคืบหน้าและเส้นทางการเรียนเฉพาะบุคคล
+      <span class="en">An online learning platform — courses, lessons and a learn-hub, with progress tracking and personalized learning paths.</span></div>
+    <div class="feats"><span class="feat">คอร์ส & Learn-Hub</span><span class="feat">ติดตามความคืบหน้า</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">📅</div><div>
+    <div class="pname">Rondora</div><div class="pcat">Booking & Experiences Platform</div>
+    <div class="pdesc">แพลตฟอร์มจองและค้นหาประสบการณ์ — จองบริการ ห้องพัก และกิจกรรมออนไลน์ได้ง่าย เหมาะกับธุรกิจท่องเที่ยวและบริการ
+      <span class="en">A booking & experiences platform — reserve services, rooms and activities online with ease. Great for tourism and service businesses.</span></div>
+    <div class="feats"><span class="feat">จองออนไลน์</span><span class="feat">ค้นหาประสบการณ์</span></div>
+  </div></div>
+
+  <div class="plat"><div class="picon">🪙</div><div>
+    <div class="pname">Euphena Token</div><div class="pcat">Our own crypto ecosystem</div>
+    <div class="pdesc">Euphena มีโทเคนและระบบนิเวศคริปโตของตัวเอง เป็นภาพใหญ่ที่พันธมิตรสามารถเติบโตไปด้วยกันได้เมื่อโปรเจกต์ขยายตัว เราอธิบายทุกอย่างอย่างชัดเจนและไม่กดดัน
+      <span class="en">Euphena has its own crypto token & ecosystem — the bigger picture partners can grow into as the project expands. We explain everything clearly and without pressure.</span></div>
+    <div class="feats"><span class="feat">ระบบนิเวศของเราเอง</span><span class="feat">เติบโตไปด้วยกัน</span></div>
+  </div></div>
+
+</div></section>
+
+<section class="wrap"><div class="final">
+  <div class="kick">Powered by AI</div>
+  <h2>อยากได้แพลตฟอร์ม AI แบบนี้สำหรับธุรกิจของคุณ?</h2>
+  <p>จุดร่วมของทุกอย่างข้างบนคือ “ปัญญาประดิษฐ์อัจฉริยะ” ข้างใน — และเราสร้างแบบนั้นให้ลูกค้าของคุณได้ ไม่ว่าจะเป็นแอป แพลตฟอร์ม หรือระบบอัตโนมัติ บอกไอเดีย แล้วเราสร้างไปด้วยกัน
+    <span class="en">Everything above shares one thing: intelligent AI inside — and we can build that for your customers. An app, a platform, an automation — tell us the idea and we build it together.</span></p>
+  <a class="btn" href="./index.html#join">เริ่มเลย · Get started →</a>
+</div></section>
+
+<footer><div class="wrap">EUPHENA × ATLAS · christian@euphena.com · สร้างด้วย ATLAS</div></footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.12});
+document.querySelectorAll('.plat').forEach(el=>io.observe(el));
+(function(){
+  const c=document.getElementById('bg'),x=c.getContext('2d');let w,h,P;
+  function rs(){w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:90},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.3,s:Math.random()*.3+.05,o:Math.random()*.5+.2}));}
+  rs();addEventListener('resize',rs);
+  (function loop(){x.clearRect(0,0,w,h);P.forEach(p=>{p.y-=p.s;if(p.y<-5){p.y=h+5;p.x=Math.random()*w;}x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(120,200,255,'+p.o+')';x.fill();});requestAnimationFrame(loop);})();
+})();
+</script>
+</body>
+</html>
