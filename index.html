@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ATLAS — Partner & Products</title>
 <style>
-  :root{
-    --bg:#05070f;--cyan:#22d3ee;--violet:#a78bff;--pv:#7c3aed;
-    --ink:#eaf2ff;--mut:#93a4c8;--card:rgba(255,255,255,.04);--line:rgba(120,160,255,.14);
-  }
+  :root{--bg:#05070f;--cyan:#22d3ee;--violet:#a78bff;--pv:#7c3aed;--ink:#eaf2ff;--mut:#93a4c8;--card:rgba(255,255,255,.04);--line:rgba(120,160,255,.14)}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:"Helvetica Neue",Arial,"Thonburi","Leelawadee UI",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
@@ -21,13 +18,13 @@
   .nav-in{max-width:1120px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
   .brand{font-weight:800;letter-spacing:2px;font-size:14px}
   .brand b{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .navlinks{display:flex;gap:18px;font-size:13px}
+  .navlinks{display:flex;gap:16px;font-size:13px}
   .navlinks a{color:var(--mut);text-decoration:none;transition:.2s}
   .navlinks a:hover{color:var(--ink)}
   .lang{display:flex;gap:4px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:3px}
   .lang button{background:none;border:0;color:var(--mut);font:inherit;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;cursor:pointer;transition:.2s}
   .lang button.on{background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713}
-  @media(max-width:820px){.navlinks{display:none}}
+  @media(max-width:920px){.navlinks{display:none}}
   header{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
   .kick{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line);border-radius:999px;padding:7px 14px;margin-bottom:22px;background:rgba(34,211,238,.06)}
   h1{font-size:clamp(38px,7vw,74px);line-height:1.05;font-weight:800;letter-spacing:-1px}
@@ -39,13 +36,13 @@
   .btn.p:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(124,58,237,.4)}
   .btn.o{border-color:var(--line);color:var(--ink);background:rgba(255,255,255,.03)}
   .btn.o:hover{border-color:var(--cyan);color:var(--cyan)}
-  section.blk{padding:64px 0;position:relative}
+  section.blk{padding:60px 0;position:relative}
   .eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);font-weight:700}
   h2{font-size:clamp(26px,4.4vw,40px);font-weight:800;margin-top:8px;letter-spacing:-.5px}
-  .lead{color:var(--mut);max-width:700px;margin-top:14px;font-size:16px}
+  .lead{color:var(--mut);max-width:720px;margin-top:14px;font-size:16px}
   .reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  .grid{display:grid;gap:16px;margin-top:30px}
+  .grid{display:grid;gap:16px;margin-top:28px}
   .g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
   @media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}}
   @media(max-width:560px){.g4,.g2{grid-template-columns:1fr}}
@@ -54,19 +51,25 @@
   .card .ic{font-size:26px}
   .card h3{font-size:16.5px;font-weight:800;margin:12px 0 6px}
   .card p{color:var(--mut);font-size:13.5px}
-  .soon{font-size:10px;font-weight:800;color:var(--violet);background:rgba(124,58,237,.15);padding:3px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
   .earnbox{background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(124,58,237,.1));border:1px solid var(--line);border-radius:22px;padding:30px;margin-top:26px}
-  .earnbox h3{font-size:clamp(20px,3vw,28px);font-weight:800}
+  .earnbox h3{font-size:clamp(19px,3vw,26px);font-weight:800}
   .keepline{color:var(--cyan)}
   table{width:100%;border-collapse:collapse;margin-top:22px;font-size:14px}
   th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}
   th{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:1px}
   td .k{color:#34e2b0;font-weight:800}
-  .note{color:var(--mut);font-size:12px;margin-top:12px;opacity:.8}
+  .note{color:var(--mut);font-size:12px;margin-top:12px;opacity:.85}
   .step .n,.eng .n{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
   .step h3{margin-top:16px}.eng h3{margin-top:14px}
   .list li{list-style:none;padding:10px 0 10px 28px;position:relative;border-bottom:1px dashed var(--line);font-size:14.5px}
   .list li:before{content:"✓";position:absolute;left:0;top:10px;color:#34e2b0;font-weight:800}
+  .flow{counter-reset:f;margin-top:24px;display:grid;gap:12px}
+  .frow2{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .frow2 .fn{counter-increment:f;min-width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+  .frow2 .fn:before{content:counter(f)}
+  .frow2 b{font-size:14.5px}.frow2 p{color:var(--mut);font-size:13px;margin-top:2px}
+  .device{display:flex;gap:12px;align-items:center;background:rgba(52,226,176,.08);border:1px solid rgba(52,226,176,.3);border-radius:14px;padding:14px 16px;margin-top:18px;font-size:14px}
+  .device .e{font-size:24px}
   .demo{border:2px dashed var(--line);border-radius:18px;padding:24px;text-align:center;background:var(--card)}
   .demo .qr{width:78px;height:78px;margin:6px auto 12px;border-radius:12px;background:repeating-conic-gradient(#22d3ee 0% 25%,#0a0e1f 0% 50%) 50%/16px 16px;opacity:.4}
   .demo h3{font-size:15px;font-weight:800}.demo p{color:var(--mut);font-size:12px;margin-top:4px}
@@ -76,16 +79,13 @@
   .badge{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:var(--mut);margin-top:14px}
   .dot{width:8px;height:8px;border-radius:50%;background:#34e2b0;box-shadow:0 0 10px #34e2b0}
   .pill2{display:inline-block;font-size:12.5px;color:var(--ink);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:8px 14px;margin:6px 6px 0 0}
-  #signup input,#signup textarea{width:100%;background:rgba(5,7,15,.6);border:1px solid var(--line);border-radius:10px;color:var(--ink);font:inherit;font-size:14px;padding:11px 13px;transition:.2s}
-  #signup input:focus,#signup textarea:focus{outline:none;border-color:var(--cyan)}
-  #signup textarea{resize:vertical}
-  .frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  @media(max-width:560px){.frow{grid-template-columns:1fr}}
+  #signup input,#signup textarea{width:100%;background:rgba(5,7,15,.6);border:1px solid var(--line);border-radius:10px;color:var(--ink);font:inherit;font-size:14px;padding:11px 13px}
+  #signup input:focus,#signup textarea:focus{outline:none;border-color:var(--cyan)}#signup textarea{resize:vertical}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:560px){.frow{grid-template-columns:1fr}}
   .flabel{font-size:13px;color:var(--mut);margin:16px 0 8px}
-  .chk{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;margin:0 16px 8px 0;cursor:pointer}
-  .chk input{width:auto!important;accent-color:#22d3ee}
+  .chk{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;margin:0 16px 8px 0;cursor:pointer}.chk input{width:auto!important;accent-color:#22d3ee}
   #chatbtn{position:fixed;right:20px;bottom:20px;z-index:40;width:60px;height:60px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;font-size:26px;cursor:pointer;box-shadow:0 10px 30px rgba(34,211,238,.35);display:flex;align-items:center;justify-content:center}
-  #chatpanel{position:fixed;right:20px;bottom:92px;z-index:40;width:344px;max-width:calc(100vw - 40px);height:470px;max-height:72vh;background:rgba(8,12,25,.97);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55)}
+  #chatpanel{position:fixed;right:20px;bottom:92px;z-index:40;width:344px;max-width:calc(100vw - 40px);height:480px;max-height:74vh;background:rgba(8,12,25,.97);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55)}
   #chatpanel.open{display:flex}
   .chead{padding:14px 16px;border-bottom:1px solid var(--line);font-weight:800;font-size:14px;display:flex;align-items:center;gap:8px}
   .chead .d{width:8px;height:8px;border-radius:50%;background:#34e2b0;box-shadow:0 0 10px #34e2b0}
@@ -93,6 +93,8 @@
   .msg{max-width:86%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.5}
   .msg.u{align-self:flex-end;background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713}
   .msg.a{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12.5px;border:1px solid var(--line);background:rgba(34,211,238,.08);color:var(--cyan);border-radius:999px;padding:6px 11px;cursor:pointer}
   .cfoot{padding:10px;border-top:1px solid var(--line);display:flex;gap:8px}
   .cfoot input{flex:1;background:rgba(5,7,15,.6);border:1px solid var(--line);border-radius:10px;color:var(--ink);font:inherit;font-size:13.5px;padding:9px 11px}
   .cfoot input:focus{outline:none;border-color:var(--cyan)}
@@ -107,10 +109,10 @@
   <div class="brand">EUPHENA <b>× ATLAS</b></div>
   <div class="navlinks">
     <a href="#paths" data-i="nav_paths">Ways to earn</a>
-    <a href="#engine" data-i="nav_engine">The engine</a>
+    <a href="#apps" data-i="nav_apps">Apps</a>
+    <a href="#engine" data-i="nav_engine">Engine</a>
     <a href="#dotiva" data-i="nav_dotiva">Dotiva</a>
-    <a href="#earn" data-i="nav_earn">Your share</a>
-    <a href="#demos" data-i="nav_demos">Demos</a>
+    <a href="#faq" data-i="nav_faq">FAQ</a>
     <a href="#join" data-i="nav_join">Join</a>
   </div>
   <div class="lang" id="lang"><button data-l="th" class="on">ไทย</button><button data-l="en">EN</button><button data-l="de">DE</button></div>
@@ -119,45 +121,69 @@
 <header><div class="wrap">
   <span class="kick" data-i="hero_kick">AI · Web · Social · Automation</span>
   <h1><span data-i="hero_t1">Build your own income</span><br><span class="grad" data-i="hero_t2">with digital & AI</span></h1>
-  <p class="sub" data-i="hero_sub">Help local businesses grow with AI. You choose what you love doing — we build the product and our AI does the hard work. You keep the majority.</p>
+  <p class="sub" data-i="hero_sub">Help local businesses grow with AI. You choose what you love — we build the product and our AI does the hard work. You keep the majority.</p>
   <div class="cta">
     <a href="#paths" class="btn p" data-i="hero_cta1">Ways to earn</a>
-    <a href="#engine" class="btn o" data-i="hero_cta2">How the machine helps you</a>
+    <a href="#dotiva" class="btn o" data-i="hero_cta2">How the work looks</a>
   </div>
   <div class="badge"><span class="dot"></span><span data-i="hero_badge">This site is itself an ATLAS demo — 3D, interactive, multilingual.</span></div>
 </div></header>
 
-<!-- WAYS TO EARN -->
 <section class="blk" id="paths"><div class="wrap">
   <div class="reveal"><div class="eyebrow" data-i="paths_eye">Ways to earn</div>
   <h2 data-i="paths_h">Choose your path — or mix them</h2>
   <p class="lead" data-i="paths_p">You don't have to do only one thing. Pick what fits you and combine several. Every path earns real money and we support all of them.</p></div>
   <div class="grid g4">
-    <div class="card reveal"><div class="ic">🌐</div><h3 data-i="pa1h">Websites & Digital</h3><p data-i="pa1p">Sell AI websites & complete digital packages to local businesses.</p></div>
-    <div class="card reveal"><div class="ic">📣</div><h3 data-i="pa2h">Social Media Marketing</h3><p data-i="pa2p">Run content & ads on Facebook / IG / TikTok for businesses — monthly income.</p></div>
-    <div class="card reveal"><div class="ic">📈</div><h3 data-i="pa3h">Trading</h3><p data-i="pa3p">Interested in markets? Christian teaches & supports you step by step. It takes learning — no quick riches.</p></div>
-    <div class="card reveal"><div class="ic">💡</div><h3 data-i="pa4h">Your own idea</h3><p data-i="pa4p">Love something else? Tell us — we build a role around what you enjoy.</p></div>
+    <div class="card reveal"><div class="ic">🌐</div><h3 data-i="pa1h">Websites & Digital</h3><p data-i="pa1p">Sell AI websites & digital packages to local businesses.</p></div>
+    <div class="card reveal"><div class="ic">📣</div><h3 data-i="pa2h">Social Media Marketing</h3><p data-i="pa2p">Run content & ads on Facebook / IG / TikTok — monthly income.</p></div>
+    <div class="card reveal"><div class="ic">📈</div><h3 data-i="pa3h">Trading</h3><p data-i="pa3p">Interested in markets? Christian teaches you step by step. Takes learning — no quick riches.</p></div>
+    <div class="card reveal"><div class="ic">💡</div><h3 data-i="pa4h">Your own idea</h3><p data-i="pa4p">Love something else? Tell us — we build a role around it.</p></div>
   </div>
 </div></section>
 
-<!-- PRODUCTS -->
 <section class="blk" id="products"><div class="wrap">
   <div class="reveal"><div class="eyebrow" data-i="prod_eye">What we offer</div>
   <h2 data-i="prod_h">Products you can sell</h2></div>
   <div class="grid g4">
-    <div class="card reveal"><div class="ic">🌐</div><h3 data-i="p1h">AI Websites</h3><p data-i="p1p">A professional website in one day — mobile & LINE ready, with Google Maps.</p></div>
-    <div class="card reveal"><div class="ic">📦</div><h3 data-i="p2h">Complete Digital Package</h3><p data-i="p2p">Website + Google Maps + LINE/social setup + AI automation.</p></div>
-    <div class="card reveal"><div class="ic">🤖</div><h3 data-i="p3h">ATLAS AI Assistant</h3><p data-i="p3p">Answers customers 24/7 in Thai — takes bookings, replies, helps sell.</p></div>
-    <div class="card reveal"><div class="ic">📣</div><h3><span data-i="p4h">Social Media Marketing</span></h3><p data-i="p4p">Content & ads to bring customers, managed monthly.</p></div>
+    <div class="card reveal"><div class="ic">🌐</div><h3 data-i="p1h">AI Websites</h3><p data-i="p1p">A professional website in one day — mobile & LINE ready.</p></div>
+    <div class="card reveal"><div class="ic">📦</div><h3 data-i="p2h">Complete Digital Package</h3><p data-i="p2p">Website + Google Maps + LINE/social + AI automation.</p></div>
+    <div class="card reveal"><div class="ic">🤖</div><h3 data-i="p3h">ATLAS AI Assistant</h3><p data-i="p3p">Answers customers 24/7 in Thai — bookings, replies, sales.</p></div>
+    <div class="card reveal"><div class="ic">📣</div><h3 data-i="p4h">Social Media Marketing</h3><p data-i="p4p">Content & ads to bring customers, managed monthly.</p></div>
   </div>
-  <p class="note reveal" data-i="prod_more">More products are added over time — you grow together with us.</p>
 </div></section>
 
-<!-- YOUR PROFILE -->
+<section class="blk" id="apps"><div class="wrap">
+  <div class="reveal"><div class="eyebrow" data-i="apps_eye">What we build</div>
+  <h2 data-i="apps_h">Real apps we've already built</h2>
+  <p class="lead" data-i="apps_p">This shows what's possible. If you or a customer has an idea — even a whole app — we can build it together.</p></div>
+  <div class="grid g3">
+    <div class="card reveal"><div class="ic">💞</div><h3 data-i="ap1h">Dating & Matching</h3><p data-i="ap1p">A social app that connects and matches people.</p></div>
+    <div class="card reveal"><div class="ic">🌿</div><h3 data-i="ap2h">Health & Wellness</h3><p data-i="ap2p">A wellness coach app — nutrition, habits, AI support.</p></div>
+    <div class="card reveal"><div class="ic">⚖️</div><h3 data-i="ap3h">Legal AI Assistant</h3><p data-i="ap3p">An AI assistant that helps law firms work faster.</p></div>
+    <div class="card reveal"><div class="ic">📅</div><h3 data-i="ap4h">Booking Platform</h3><p data-i="ap4p">Online reservations for services, rooms & venues.</p></div>
+    <div class="card reveal"><div class="ic">🏠</div><h3 data-i="ap5h">Real-Estate Tool</h3><p data-i="ap5p">A smart tool for properties & listings.</p></div>
+    <div class="card reveal"><div class="ic">🎓</div><h3 data-i="ap6h">Education Platform</h3><p data-i="ap6p">An online learning & courses platform.</p></div>
+  </div>
+  <div class="earnbox reveal" style="margin-top:20px;text-align:center">
+    <h3 data-i="ap7h">Your idea → we build it together</h3>
+    <p class="lead" style="margin:10px auto 0" data-i="ap7p">If you love an idea — an app, a shop, a service — tell us. We turn it into something real, with you.</p>
+  </div>
+</div></section>
+
+<section class="blk" id="ecosystem"><div class="wrap">
+  <div class="reveal"><div class="eyebrow" data-i="eco_eye">Our ecosystem</div>
+  <h2 data-i="eco_h">Grow with the whole Euphena world</h2>
+  <p class="lead" data-i="eco_p">Beyond websites, you can grow into our bigger projects — at your own pace, with guidance.</p></div>
+  <div class="grid g2">
+    <div class="card reveal"><div class="ic">🦅</div><h3 data-i="be_h">BlackEagle — Crypto Trading Bots</h3><p data-i="be_p">An automated crypto-trading system. If markets interest you, Christian teaches you to use it step by step. Note: trading takes learning and carries risk — never a guaranteed income.</p></div>
+    <div class="card reveal"><div class="ic">🪙</div><h3 data-i="eu_h">Euphena Token — our own crypto</h3><p data-i="eu_p">Euphena has its own crypto token & ecosystem. As a partner you can be part of the wider project as it grows. We explain everything clearly, no pressure.</p></div>
+  </div>
+</div></section>
+
 <section class="blk" id="profile"><div class="wrap">
   <div class="reveal"><div class="eyebrow" data-i="prof_eye">Your profile</div>
   <h2 data-i="prof_h">Tell us what you love doing</h2>
-  <p class="lead" data-i="prof_p">We don't push you into one job. Tell Christian what you enjoy and what you're good at — together we design your perfect role and income around it.</p>
+  <p class="lead" data-i="prof_p">We don't push you into one job. Tell Christian what you enjoy — together we design your perfect role and income.</p>
   <div style="margin-top:20px">
     <span class="pill2" data-i="prof_b1">Like talking to people → Sales & customer care</span>
     <span class="pill2" data-i="prof_b2">Creative → Social media & content</span>
@@ -167,55 +193,52 @@
   </div></div>
 </div></section>
 
-<!-- THE ENGINE -->
 <section class="blk" id="engine"><div class="wrap">
   <div class="reveal"><div class="eyebrow" data-i="eng_eye">The engine behind you</div>
   <h2 data-i="eng_h">ATLAS & Aurelia do the hard work</h2>
-  <p class="lead" data-i="eng_p">You are not alone and you don't do the heavy lifting. Our AI system works for you — you focus on the people.</p></div>
+  <p class="lead" data-i="eng_p">You are not alone and you don't do the heavy lifting. Our AI works for you — you focus on the people.</p></div>
   <div class="grid g4">
     <div class="card eng reveal"><div class="n">1</div><h3 data-i="eng1h">Finds customers</h3><p data-i="eng1p">ATLAS researches local businesses that need what you offer.</p></div>
-    <div class="card eng reveal"><div class="n">2</div><h3 data-i="eng2h">Writes & sends</h3><p data-i="eng2p">Aurelia writes to customers, emails & messages them in your name.</p></div>
+    <div class="card eng reveal"><div class="n">2</div><h3 data-i="eng2h">Writes & sends</h3><p data-i="eng2p">Aurelia writes & messages customers in your name.</p></div>
     <div class="card eng reveal"><div class="n">3</div><h3 data-i="eng3h">Follows up</h3><p data-i="eng3p">Aurelia keeps following up automatically — no lead is lost.</p></div>
-    <div class="card eng reveal"><div class="n">4</div><h3 data-i="eng4h">You close</h3><p data-i="eng4p">You do the human part — meet, show a demo, close. The machine does the rest.</p></div>
+    <div class="card eng reveal"><div class="n">4</div><h3 data-i="eng4h">You close</h3><p data-i="eng4p">You do the human part — meet, show a demo, close.</p></div>
   </div>
 </div></section>
 
-<!-- DOTIVA HOW-TO -->
 <section class="blk" id="dotiva"><div class="wrap">
-  <div class="reveal"><div class="eyebrow" data-i="dot_eye">How it works with Dotiva</div>
-  <h2 data-i="dot_h">Easy — everything in one place</h2>
-  <p class="lead" data-i="dot_p">Dotiva is your workspace: all your customers, messages and deals in one simple system. Aurelia works inside it for you.</p></div>
-  <div class="grid g2" style="align-items:start">
-    <div class="card reveal">
-      <h3 data-i="dneed_h">What you need</h3>
-      <ul class="list" style="margin-top:8px">
-        <li data-i="dn1">A phone or laptop + internet</li>
-        <li data-i="dn2">LINE (and Facebook if you have it)</li>
-        <li data-i="dn3">The will to talk to people</li>
-        <li data-i="dn4">Your Dotiva login (Christian gives it to you)</li>
-      </ul>
-      <p class="note" data-i="dneed_note">That's it. No tech skills needed — the AI handles the rest.</p>
-    </div>
-    <div class="card reveal">
-      <h3 data-i="dflow_h">How a customer flows through</h3>
-      <ul class="list" style="margin-top:8px">
-        <li data-i="df1">1 · Add a business in Dotiva (name & contact)</li>
-        <li data-i="df2">2 · ATLAS researches it, Aurelia writes the first message</li>
-        <li data-i="df3">3 · You approve → Aurelia sends & follows up</li>
-        <li data-i="df4">4 · You show a demo & close the deal</li>
-        <li data-i="df5">5 · Dotiva tracks everything + your earnings</li>
-      </ul>
-    </div>
+  <div class="reveal"><div class="eyebrow" data-i="dot_eye">Your Dotiva Sales Cockpit</div>
+  <h2 data-i="dot_h">Exactly how the work looks — day by day</h2>
+  <p class="lead" data-i="dot_p">Dotiva is your sales cockpit: all your customers, messages, tasks and earnings in one simple screen. Aurelia works inside it for you. Here is exactly what you do:</p></div>
+
+  <div class="device reveal"><span class="e">📱</span><span data-i="dot_device"><b>A phone is enough.</b> You can run everything from your mobile — a laptop is nice for bigger tasks but not required.</span></div>
+
+  <div class="flow">
+    <div class="frow2 reveal"><div class="fn"></div><div><b data-i="dc1h">Open Dotiva in the morning</b><p data-i="dc1p">On your phone you see today's tasks: who to contact, who replied, what to follow up.</p></div></div>
+    <div class="frow2 reveal"><div class="fn"></div><div><b data-i="dc2h">Add a business you met (30 seconds)</b><p data-i="dc2p">Name + LINE/phone. That's all — you met them at a shop, market or through friends.</p></div></div>
+    <div class="frow2 reveal"><div class="fn"></div><div><b data-i="dc3h">ATLAS researches, Aurelia writes</b><p data-i="dc3p">ATLAS looks up the business; Aurelia drafts a friendly first message for you automatically.</p></div></div>
+    <div class="frow2 reveal"><div class="fn"></div><div><b data-i="dc4h">You read & tap "approve"</b><p data-i="dc4p">You just check the message and approve — Aurelia sends it (LINE/email) and follows up on its own.</p></div></div>
+    <div class="frow2 reveal"><div class="fn"></div><div><b data-i="dc5h">Ping when they reply</b><p data-i="dc5p">Dotiva pings you when a customer answers. You step in for the human conversation.</p></div></div>
+    <div class="frow2 reveal"><div class="fn"></div><div><b data-i="dc6h">Show the demo & agree a price</b><p data-i="dc6p">Open the live demo on your phone, show them, agree a price you're happy with.</p></div></div>
+    <div class="frow2 reveal"><div class="fn"></div><div><b data-i="dc7h">Tap "won" → we build → you get paid</b><p data-i="dc7p">We build the product; Dotiva tracks the deal and shows your earnings clearly.</p></div></div>
+  </div>
+
+  <div class="earnbox reveal" style="margin-top:22px">
+    <h3 data-i="dc_do_h">So what do YOU actually do?</h3>
+    <ul class="list" style="margin-top:10px">
+      <li data-i="dc_do1">Talk to people (in person or on LINE) — the part humans do best.</li>
+      <li data-i="dc_do2">Check & approve the messages Aurelia writes.</li>
+      <li data-i="dc_do3">Show a demo and close the deal.</li>
+      <li data-i="dc_do4">Everything technical — research, writing, follow-up, building — is automated.</li>
+    </ul>
   </div>
 </div></section>
 
-<!-- EARN / YOUR SHARE -->
 <section class="blk" id="earn"><div class="wrap">
   <div class="reveal"><div class="eyebrow" data-i="earn_eye">Your share</div>
   <h2 data-i="earn_h">You keep the majority</h2></div>
   <div class="earnbox reveal">
     <h3><span class="keepline" data-i="earn_big">You set the price. We take only a small base cost.</span></h3>
-    <p class="lead" data-i="earn_lead">We build the product for a small base cost (tech & hosting). Everything above that is yours. The better you sell, the more you keep.</p>
+    <p class="lead" data-i="earn_lead">We build the product for a small base cost (tech & hosting). Everything above that is yours.</p>
     <table>
       <tr><th data-i="th_prod">Product</th><th data-i="th_price">Suggested price</th><th data-i="th_base">Base cost</th><th data-i="th_keep">You keep</th></tr>
       <tr><td data-i="r1">AI Website (one-time)</td><td>฿8,000–15,000</td><td>~฿2,000</td><td class="k">฿6,000–13,000</td></tr>
@@ -227,7 +250,6 @@
   </div>
 </div></section>
 
-<!-- SUPPORT -->
 <section class="blk" id="support"><div class="wrap">
   <div class="reveal"><div class="eyebrow" data-i="sup_eye">We support you</div>
   <h2 data-i="sup_h">You are never alone</h2></div>
@@ -238,52 +260,39 @@
   </div>
 </div></section>
 
-<!-- HOW TO START -->
-<section class="blk" id="how"><div class="wrap">
-  <div class="reveal"><div class="eyebrow" data-i="how_eye">How to start</div>
-  <h2 data-i="how_h">Three simple steps</h2></div>
-  <div class="grid g3">
-    <div class="step card reveal"><div class="n">1</div><h3 data-i="st1h">Pick your path</h3><p data-i="st1p">Tell Christian what you love — website sales, social, trading or your own idea.</p></div>
-    <div class="step card reveal"><div class="n">2</div><h3 data-i="st2h">Get Dotiva & a demo</h3><p data-i="st2p">You get your login and ready demos to show.</p></div>
-    <div class="step card reveal"><div class="n">3</div><h3 data-i="st3h">Talk → we build → you get paid</h3><p data-i="st3p">The AI finds & writes, you close, Dotiva tracks your money.</p></div>
-  </div>
-</div></section>
-
-<!-- DEMOS -->
-<section class="blk" id="demos"><div class="wrap">
-  <div class="reveal"><div class="eyebrow" data-i="dem_eye">Demos to show</div>
-  <h2 data-i="dem_h">Show, don’t tell</h2>
-  <p class="lead" data-i="dem_p">Open a live demo on your phone right in front of the customer. Christian provides the real links & QR codes.</p></div>
-  <div class="grid g3">
-    <div class="demo reveal"><div class="qr"></div><h3 data-i="d1h">Restaurant / Café</h3><p data-i="dslot">[ link / QR here ]</p></div>
-    <div class="demo reveal"><div class="qr"></div><h3 data-i="d2h">Hotel / Guesthouse</h3><p data-i="dslot2">[ link / QR here ]</p></div>
-    <div class="demo reveal"><div class="qr"></div><h3 data-i="d3h">Salon / Spa</h3><p data-i="dslot3">[ link / QR here ]</p></div>
+<section class="blk" id="faq"><div class="wrap">
+  <div class="reveal"><div class="eyebrow" data-i="faq_eye">Questions</div>
+  <h2 data-i="faq_h">Frequently asked</h2></div>
+  <div class="grid g2">
+    <div class="card reveal"><h3 data-i="q1">Can I work with just a phone?</h3><p data-i="an1">Yes — everything works on your phone. A laptop is optional, not required.</p></div>
+    <div class="card reveal"><h3 data-i="q2">Do I need experience or tech skills?</h3><p data-i="an2">No. We build the product and the AI helps — you just talk to people.</p></div>
+    <div class="card reveal"><h3 data-i="q3">Does it cost me anything to start?</h3><p data-i="an3">No upfront cost to begin. You earn from what you sell.</p></div>
+    <div class="card reveal"><h3 data-i="q4">How do I find customers?</h3><p data-i="an4">ATLAS finds leads and Aurelia writes them — plus your own network & LINE.</p></div>
+    <div class="card reveal"><h3 data-i="q5">How much can I earn?</h3><p data-i="an5">You keep the majority of each sale. It grows with every customer you add.</p></div>
+    <div class="card reveal"><h3 data-i="q6">Can I do this part-time?</h3><p data-i="an6">Yes — at your own pace, alongside anything else.</p></div>
   </div>
 </div></section>
 
 <section class="blk" id="join"><div class="wrap">
   <div class="reveal"><div class="eyebrow" data-i="join_eye">Register</div>
   <h2 data-i="join_h">How to join — step by step</h2>
-  <p class="lead" data-i="join_p">Becoming a partner is simple. Here is exactly how it works — no pressure, at your own pace.</p></div>
+  <p class="lead" data-i="join_p">Becoming a partner is simple — no pressure, at your own pace.</p></div>
   <div class="grid g4">
     <div class="step card reveal"><div class="n">1</div><h3 data-i="j1h">Sign up</h3><p data-i="j1p">Fill the short form below — it goes straight to Christian.</p></div>
     <div class="step card reveal"><div class="n">2</div><h3 data-i="j2h">Welcome call</h3><p data-i="j2p">We talk about what you love and choose your path together.</p></div>
-    <div class="step card reveal"><div class="n">3</div><h3 data-i="j3h">Get set up</h3><p data-i="j3p">You receive your Dotiva login, training, price lists and demos.</p></div>
+    <div class="step card reveal"><div class="n">3</div><h3 data-i="j3h">Get set up</h3><p data-i="j3p">You receive your Dotiva login, training and demos.</p></div>
     <div class="step card reveal"><div class="n">4</div><h3 data-i="j4h">First customer</h3><p data-i="j4p">ATLAS finds leads, Aurelia writes them, you close — and get paid.</p></div>
   </div>
   <div class="earnbox reveal" style="margin-top:24px">
     <h3 data-i="form_h">Sign up as a partner</h3>
     <form id="signup" style="margin-top:16px">
-      <div class="frow">
-        <input name="name" data-ph="form_name" required>
-        <input name="contact" data-ph="form_contact" required>
-      </div>
+      <div class="frow"><input name="name" data-ph="form_name" required><input name="contact" data-ph="form_contact" required></div>
       <input name="country" data-ph="form_country" value="Thailand" style="margin-top:10px">
       <div class="flabel" data-i="form_int">What interests you?</div>
       <label class="chk"><input type="checkbox" name="interest" value="Websites"><span data-i="fi1">Websites</span></label>
       <label class="chk"><input type="checkbox" name="interest" value="Social Media"><span data-i="fi2">Social Media</span></label>
       <label class="chk"><input type="checkbox" name="interest" value="Trading"><span data-i="fi3">Trading</span></label>
-      <label class="chk"><input type="checkbox" name="interest" value="Own idea"><span data-i="fi4">Own idea</span></label>
+      <label class="chk"><input type="checkbox" name="interest" value="Own app/idea"><span data-i="fi4">Own idea</span></label>
       <textarea name="message" data-ph="form_msg" rows="3" style="margin-top:12px"></textarea>
       <button class="btn p" type="submit" data-i="form_btn" style="margin-top:14px">Send</button>
       <div id="formmsg" style="margin-top:12px;font-size:13.5px"></div>
@@ -291,10 +300,21 @@
   </div>
 </div></section>
 
+<section class="blk" id="demos"><div class="wrap">
+  <div class="reveal"><div class="eyebrow" data-i="dem_eye">Demos to show</div>
+  <h2 data-i="dem_h">Show, don’t tell</h2>
+  <p class="lead" data-i="dem_p">Open a live demo on your phone in front of the customer. Christian provides the real links & QR codes.</p></div>
+  <div class="grid g3">
+    <div class="demo reveal"><div class="qr"></div><h3 data-i="d1h">Restaurant / Café</h3><p data-i="dslot">[ link / QR here ]</p></div>
+    <div class="demo reveal"><div class="qr"></div><h3 data-i="d2h">Hotel / Guesthouse</h3><p data-i="dslot2">[ link / QR here ]</p></div>
+    <div class="demo reveal"><div class="qr"></div><h3 data-i="d3h">Salon / Spa</h3><p data-i="dslot3">[ link / QR here ]</p></div>
+  </div>
+</div></section>
+
 <section class="blk"><div class="wrap">
   <div class="final reveal">
     <h2 data-i="cta_h">Let’s start together</h2>
-    <p data-i="cta_p">You’re not alone — we support you every step, and the AI does the hard work. Our goal is your own steady income. Tell Christian what you love — and we start your first customer.</p>
+    <p data-i="cta_p">You’re not alone — we support you every step, and the AI does the hard work. Tell Christian what you love — and we start your first customer.</p>
     <div class="cta" style="justify-content:center;margin-top:26px"><a href="mailto:christian@euphena.com" class="btn p" data-i="cta_btn">Contact Christian</a></div>
   </div>
 </div></section>
@@ -311,117 +331,140 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const I={
-th:{nav_paths:"วิธีหารายได้",nav_engine:"ระบบเบื้องหลัง",nav_dotiva:"Dotiva",nav_earn:"ส่วนแบ่งของคุณ",nav_demos:"เดโม",
-hero_kick:"AI · เว็บ · โซเชียล · ระบบอัตโนมัติ",hero_t1:"สร้างรายได้ของคุณเอง",hero_t2:"ด้วยดิจิทัลและ AI",
-hero_sub:"ช่วยธุรกิจในพื้นที่ให้เติบโตด้วย AI คุณเลือกงานที่คุณชอบ เราสร้างสินค้าให้ และ AI ทำงานหนักแทนคุณ คุณเก็บส่วนใหญ่ไว้เอง",
-hero_cta1:"วิธีหารายได้",hero_cta2:"ระบบช่วยคุณอย่างไร",hero_badge:"เว็บนี้เองคือเดโมของ ATLAS — 3D อินเทอร์แอกทีฟ หลายภาษา",
+th:{nav_paths:"วิธีหารายได้",nav_apps:"แอป",nav_engine:"ระบบ",nav_dotiva:"Dotiva",nav_faq:"คำถาม",nav_join:"สมัคร",
+hero_kick:"AI · เว็บ · โซเชียล · อัตโนมัติ",hero_t1:"สร้างรายได้ของคุณเอง",hero_t2:"ด้วยดิจิทัลและ AI",
+hero_sub:"ช่วยธุรกิจในพื้นที่ให้เติบโตด้วย AI คุณเลือกงานที่คุณชอบ เราสร้างสินค้าให้ และ AI ทำงานหนักแทน คุณเก็บส่วนใหญ่ไว้เอง",
+hero_cta1:"วิธีหารายได้",hero_cta2:"ดูว่างานเป็นอย่างไร",hero_badge:"เว็บนี้เองคือเดโมของ ATLAS — 3D อินเทอร์แอกทีฟ หลายภาษา",
 paths_eye:"วิธีหารายได้",paths_h:"เลือกทางของคุณ — หรือผสมกันก็ได้",paths_p:"คุณไม่จำเป็นต้องทำอย่างเดียว เลือกสิ่งที่เหมาะกับคุณ และทำหลายอย่างพร้อมกันได้ ทุกทางมีรายได้จริงและเราสนับสนุนทุกทาง",
-pa1h:"เว็บไซต์และดิจิทัล",pa1p:"ขายเว็บ AI และแพ็กเกจดิจิทัลครบวงจรให้ธุรกิจในพื้นที่",
-pa2h:"การตลาดโซเชียลมีเดีย",pa2p:"ทำคอนเทนต์และโฆษณาบน Facebook / IG / TikTok ให้ธุรกิจ — รายได้ต่อเดือน",
-pa3h:"เทรด (Trading)",pa3p:"สนใจตลาดการเงินไหม? Christian สอนและช่วยทีละขั้น ต้องเรียนรู้ ไม่ใช่รวยเร็ว",
-pa4h:"ไอเดียของคุณเอง",pa4p:"ชอบอย่างอื่น? บอกเรา แล้วเราสร้างบทบาทให้เหมาะกับสิ่งที่คุณชอบ",
-prod_eye:"สิ่งที่เรานำเสนอ",prod_h:"สินค้าที่คุณขายได้",
-p1h:"เว็บไซต์ด้วย AI",p1p:"เว็บระดับมืออาชีพในหนึ่งวัน รองรับมือถือและ LINE พร้อม Google Maps",
-p2h:"แพ็กเกจดิจิทัลครบวงจร",p2p:"เว็บไซต์ + Google Maps + ตั้งค่า LINE/โซเชียล + ระบบอัตโนมัติ AI",
-p3h:"ผู้ช่วย AI (ATLAS)",p3p:"ตอบลูกค้า 24 ชม. เป็นภาษาไทย รับจอง ตอบคำถาม ช่วยขาย",
-p4h:"การตลาดโซเชียลมีเดีย",p4p:"คอนเทนต์และโฆษณาเพื่อดึงลูกค้า ดูแลรายเดือน",
-prod_more:"มีสินค้าใหม่เพิ่มเรื่อย ๆ — คุณเติบโตไปพร้อมกับเรา",
-prof_eye:"โปรไฟล์ของคุณ",prof_h:"บอกเราว่าคุณชอบทำอะไร",prof_p:"เราไม่บังคับให้คุณทำงานแบบเดียว บอก Christian ว่าคุณชอบอะไรและถนัดอะไร แล้วเราจะออกแบบบทบาทและรายได้ที่เหมาะกับคุณที่สุดไปด้วยกัน",
-prof_b1:"ชอบคุยกับคน → งานขายและดูแลลูกค้า",prof_b2:"สายครีเอทีฟ → โซเชียลและคอนเทนต์",prof_b3:"เป็นระเบียบ → ดูแลลูกค้าใน Dotiva",prof_b4:"สนใจตลาดการเงิน → เทรดแบบมีคนสอน",prof_b5:"อย่างอื่น → เราสร้างไปด้วยกัน",
-eng_eye:"ระบบเบื้องหลังคุณ",eng_h:"ATLAS และ Aurelia ทำงานหนักแทนคุณ",eng_p:"คุณไม่ได้อยู่คนเดียวและไม่ต้องทำงานหนัก ระบบ AI ทำงานให้คุณ คุณโฟกัสที่ผู้คน",
-eng1h:"หาลูกค้า",eng1p:"ATLAS ค้นหาธุรกิจในพื้นที่ที่ต้องการสิ่งที่คุณเสนอ",
-eng2h:"เขียนและส่ง",eng2p:"Aurelia เขียนถึงลูกค้า ส่งอีเมลและข้อความในนามของคุณ",
-eng3h:"ติดตามผล",eng3p:"Aurelia ติดตามให้อัตโนมัติ ไม่มีลูกค้าหลุด",
-eng4h:"คุณปิดการขาย",eng4p:"คุณทำส่วนของคน — พบ โชว์เดโม ปิดการขาย ที่เหลือระบบทำให้",
-dot_eye:"ทำงานกับ Dotiva อย่างไร",dot_h:"ง่าย — ทุกอย่างอยู่ที่เดียว",dot_p:"Dotiva คือพื้นที่ทำงานของคุณ ลูกค้า ข้อความ และดีลทั้งหมดอยู่ในระบบเดียวที่ใช้ง่าย Aurelia ทำงานอยู่ในนั้นเพื่อคุณ",
-dneed_h:"สิ่งที่คุณต้องมี",dn1:"มือถือหรือแล็ปท็อป + อินเทอร์เน็ต",dn2:"LINE (และ Facebook ถ้ามี)",dn3:"ความตั้งใจที่จะคุยกับคน",dn4:"บัญชี Dotiva (Christian ให้คุณ)",dneed_note:"แค่นี้เอง ไม่ต้องเก่งเทคโนโลยี — AI จัดการที่เหลือ",
-dflow_h:"ลูกค้าหนึ่งคนไหลผ่านระบบอย่างไร",df1:"1 · เพิ่มธุรกิจใน Dotiva (ชื่อ + ติดต่อ)",df2:"2 · ATLAS ค้นข้อมูล Aurelia เขียนข้อความแรก",df3:"3 · คุณอนุมัติ → Aurelia ส่งและติดตาม",df4:"4 · คุณโชว์เดโมและปิดการขาย",df5:"5 · Dotiva บันทึกทุกอย่าง + รายได้ของคุณ",
-earn_eye:"ส่วนแบ่งของคุณ",earn_h:"คุณเก็บส่วนใหญ่ไว้เอง",earn_big:"คุณกำหนดราคาเอง เราคิดแค่ต้นทุนพื้นฐานเล็กน้อย",
-earn_lead:"เราสร้างสินค้าให้โดยคิดต้นทุนพื้นฐานเล็กน้อย (เทคโนโลยีและโฮสติ้ง) ที่เหลือทั้งหมดเป็นของคุณ ยิ่งขายดี ยิ่งได้มาก",
-th_prod:"สินค้า",th_price:"ราคาขายแนะนำ",th_base:"ต้นทุนพื้นฐาน",th_keep:"คุณได้รับ",
-r1:"เว็บไซต์ด้วย AI (ครั้งเดียว)",r2:"ค่าดูแลรายเดือน",r3:"แพ็กเกจครบวงจร",r5:"โซเชียลมีเดีย (รายเดือน)",earn_note:"* ตัวเลขเป็นตัวอย่าง ปรับได้ตามลูกค้าและพื้นที่",
+pa1h:"เว็บไซต์และดิจิทัล",pa1p:"ขายเว็บ AI และแพ็กเกจดิจิทัลให้ธุรกิจในพื้นที่",pa2h:"การตลาดโซเชียล",pa2p:"ทำคอนเทนต์และโฆษณาบน Facebook / IG / TikTok — รายได้ต่อเดือน",pa3h:"เทรด (Trading)",pa3p:"สนใจตลาดการเงินไหม? Christian สอนทีละขั้น ต้องเรียนรู้ ไม่ใช่รวยเร็ว",pa4h:"ไอเดียของคุณเอง",pa4p:"ชอบอย่างอื่น? บอกเรา แล้วเราสร้างบทบาทให้เหมาะกับคุณ",
+prod_eye:"สิ่งที่เรานำเสนอ",prod_h:"สินค้าที่คุณขายได้",p1h:"เว็บไซต์ด้วย AI",p1p:"เว็บมืออาชีพในหนึ่งวัน รองรับมือถือและ LINE",p2h:"แพ็กเกจดิจิทัลครบวงจร",p2p:"เว็บ + Google Maps + LINE/โซเชียล + ระบบอัตโนมัติ AI",p3h:"ผู้ช่วย AI (ATLAS)",p3p:"ตอบลูกค้า 24 ชม. ภาษาไทย รับจอง ตอบคำถาม ช่วยขาย",p4h:"การตลาดโซเชียล",p4p:"คอนเทนต์และโฆษณาดึงลูกค้า ดูแลรายเดือน",
+apps_eye:"สิ่งที่เราสร้าง",apps_h:"แอปจริงที่เราสร้างมาแล้ว",apps_p:"นี่แสดงให้เห็นว่าทำอะไรได้บ้าง ถ้าคุณหรือลูกค้ามีไอเดีย — แม้แต่ทั้งแอป — เราสร้างไปด้วยกันได้",
+ap1h:"เดตและจับคู่",ap1p:"แอปโซเชียลที่เชื่อมและจับคู่ผู้คน",ap2h:"สุขภาพและเวลเนส",ap2p:"แอปโค้ชสุขภาพ — โภชนาการ พฤติกรรม ผู้ช่วย AI",ap3h:"ผู้ช่วยกฎหมาย AI",ap3p:"ผู้ช่วย AI ช่วยสำนักงานกฎหมายทำงานเร็วขึ้น",ap4h:"แพลตฟอร์มจอง",ap4p:"ระบบจองออนไลน์สำหรับบริการ ห้องพัก สถานที่",ap5h:"เครื่องมืออสังหาฯ",ap5p:"เครื่องมืออัจฉริยะสำหรับอสังหาฯ และประกาศขาย",ap6h:"แพลตฟอร์มการศึกษา",ap6p:"แพลตฟอร์มเรียนออนไลน์และคอร์สต่าง ๆ",
+ap7h:"ไอเดียของคุณ → เราสร้างไปด้วยกัน",ap7p:"ถ้าคุณรักไอเดียไหน — แอป ร้าน หรือบริการ — บอกเรา แล้วเราทำให้เป็นจริงไปกับคุณ",
+prof_eye:"โปรไฟล์ของคุณ",prof_h:"บอกเราว่าคุณชอบทำอะไร",prof_p:"เราไม่บังคับให้ทำแบบเดียว บอก Christian ว่าคุณชอบอะไร แล้วเราออกแบบบทบาทและรายได้ที่เหมาะกับคุณไปด้วยกัน",
+prof_b1:"ชอบคุยกับคน → งานขายและดูแลลูกค้า",prof_b2:"สายครีเอทีฟ → โซเชียลและคอนเทนต์",prof_b3:"เป็นระเบียบ → ดูแลลูกค้าใน Dotiva",prof_b4:"สนใจตลาด → เทรดแบบมีคนสอน",prof_b5:"อย่างอื่น → เราสร้างไปด้วยกัน",
+eng_eye:"ระบบเบื้องหลังคุณ",eng_h:"ATLAS และ Aurelia ทำงานหนักแทนคุณ",eng_p:"คุณไม่ได้อยู่คนเดียวและไม่ต้องทำงานหนัก AI ทำงานให้คุณ คุณโฟกัสที่ผู้คน",
+eng1h:"หาลูกค้า",eng1p:"ATLAS ค้นหาธุรกิจในพื้นที่ที่ต้องการสิ่งที่คุณเสนอ",eng2h:"เขียนและส่ง",eng2p:"Aurelia เขียนและส่งข้อความถึงลูกค้าในนามคุณ",eng3h:"ติดตามผล",eng3p:"Aurelia ติดตามให้อัตโนมัติ ไม่มีลูกค้าหลุด",eng4h:"คุณปิดการขาย",eng4p:"คุณทำส่วนของคน — พบ โชว์เดโม ปิดการขาย",
+dot_eye:"Dotiva Sales Cockpit ของคุณ",dot_h:"งานเป็นอย่างไรจริง ๆ — วันต่อวัน",dot_p:"Dotiva คือค็อกพิตการขายของคุณ ลูกค้า ข้อความ งาน และรายได้ทั้งหมดอยู่ในหน้าจอเดียวที่ง่าย Aurelia ทำงานอยู่ในนั้นเพื่อคุณ นี่คือสิ่งที่คุณทำจริง ๆ:",
+dot_device:"<b>ใช้แค่มือถือก็พอ</b> ทำได้ทุกอย่างจากมือถือ — แล็ปท็อปดีสำหรับงานใหญ่แต่ไม่จำเป็น",
+dc1h:"เปิด Dotiva ตอนเช้า",dc1p:"บนมือถือคุณเห็นงานวันนี้: ติดต่อใคร ใครตอบกลับ อะไรต้องตามต่อ",
+dc2h:"เพิ่มธุรกิจที่เจอ (30 วินาที)",dc2p:"ชื่อ + LINE/เบอร์ แค่นั้น — คุณเจอเขาที่ร้าน ตลาด หรือผ่านเพื่อน",
+dc3h:"ATLAS ค้นข้อมูล Aurelia เขียน",dc3p:"ATLAS หาข้อมูลธุรกิจ Aurelia ร่างข้อความแรกที่เป็นมิตรให้อัตโนมัติ",
+dc4h:"คุณอ่านแล้วกด “อนุมัติ”",dc4p:"คุณแค่ตรวจข้อความและอนุมัติ — Aurelia ส่ง (LINE/อีเมล) และติดตามเอง",
+dc5h:"เตือนเมื่อเขาตอบ",dc5p:"Dotiva เตือนคุณเมื่อลูกค้าตอบ คุณเข้ามาคุยแบบคนต่อคน",
+dc6h:"โชว์เดโมและตกลงราคา",dc6p:"เปิดเดโมสดบนมือถือ โชว์ให้ดู แล้วตกลงราคาที่คุณพอใจ",
+dc7h:"กด “ปิดการขาย” → เราสร้าง → คุณได้เงิน",dc7p:"เราสร้างสินค้าให้ Dotiva บันทึกดีลและแสดงรายได้ของคุณชัดเจน",
+dc_do_h:"แล้ว “คุณ” ทำอะไรจริง ๆ?",dc_do1:"คุยกับคน (ต่อหน้าหรือทาง LINE) — ส่วนที่คนทำได้ดีที่สุด",dc_do2:"ตรวจและอนุมัติข้อความที่ Aurelia เขียน",dc_do3:"โชว์เดโมและปิดการขาย",dc_do4:"เรื่องเทคนิคทั้งหมด — ค้นข้อมูล เขียน ติดตาม สร้าง — เป็นอัตโนมัติ",
+earn_eye:"ส่วนแบ่งของคุณ",earn_h:"คุณเก็บส่วนใหญ่ไว้เอง",earn_big:"คุณกำหนดราคาเอง เราคิดแค่ต้นทุนพื้นฐานเล็กน้อย",earn_lead:"เราสร้างสินค้าให้โดยคิดต้นทุนพื้นฐานเล็กน้อย (เทคโนโลยีและโฮสติ้ง) ที่เหลือทั้งหมดเป็นของคุณ",
+th_prod:"สินค้า",th_price:"ราคาขายแนะนำ",th_base:"ต้นทุนพื้นฐาน",th_keep:"คุณได้รับ",r1:"เว็บไซต์ด้วย AI (ครั้งเดียว)",r2:"ค่าดูแลรายเดือน",r3:"แพ็กเกจครบวงจร",r5:"โซเชียล (รายเดือน)",earn_note:"* ตัวเลขเป็นตัวอย่าง ปรับได้ตามลูกค้าและพื้นที่",
 sup_eye:"เราสนับสนุนคุณ",sup_h:"คุณไม่ได้อยู่คนเดียว",s1h:"เราสร้างให้",s1p:"เราและ AI สร้างสินค้าจริง คุณแค่คุยกับผู้คน",s2h:"สอนงาน + เทมเพลต",s2p:"รายการราคา เดโม ใบเสนอราคา และคำแนะนำ ครบ",s3h:"ดูแลเทคโนโลยี",s3p:"โฮสติ้ง อัปเดต Dotiva และผู้ช่วย AI เราจัดการให้",
-how_eye:"เริ่มต้นอย่างไร",how_h:"สามขั้นตอนง่าย ๆ",st1h:"เลือกทางของคุณ",st1p:"บอก Christian ว่าคุณชอบอะไร — ขายเว็บ โซเชียล เทรด หรือไอเดียของคุณ",st2h:"รับ Dotiva และเดโม",st2p:"คุณได้บัญชีและเดโมพร้อมโชว์",st3h:"คุย → เราสร้าง → คุณรับเงิน",st3p:"AI หาและเขียนให้ คุณปิดการขาย Dotiva บันทึกเงินของคุณ",
-dem_eye:"โชว์เดโม",dem_h:"ให้ดู ไม่ใช่แค่เล่า",dem_p:"เปิดเดโมจริงบนมือถือให้ลูกค้าดูได้เลย Christian จะให้ลิงก์และ QR จริง",d1h:"ร้านอาหาร / คาเฟ่",d2h:"โรงแรม / ที่พัก",d3h:"ร้านเสริมสวย / สปา",dslot:"[ ใส่ลิงก์/QR ]",dslot2:"[ ใส่ลิงก์/QR ]",dslot3:"[ ใส่ลิงก์/QR ]",
-cta_h:"มาเริ่มไปด้วยกัน",cta_p:"คุณไม่ได้ทำคนเดียว — เราช่วยทุกขั้นตอน และ AI ทำงานหนักแทน เป้าหมายคือรายได้ของคุณเองที่มั่นคง บอก Christian ว่าคุณชอบอะไร แล้วเริ่มลูกค้ารายแรกกัน",cta_btn:"ติดต่อ Christian",nav_join:"สมัคร",join_eye:"สมัครเข้าร่วม",join_h:"วิธีสมัคร — ทีละขั้นตอน",join_p:"การเป็นพันธมิตรง่ายมาก นี่คือขั้นตอนทั้งหมด — ไม่มีการกดดัน ทำตามจังหวะของคุณ",j1h:"สมัคร",j1p:"กรอกฟอร์มสั้น ๆ ด้านล่าง ส่งตรงถึง Christian",j2h:"คุยต้อนรับ",j2p:"เราคุยกันว่าคุณชอบอะไร แล้วเลือกเส้นทางไปด้วยกัน",j3h:"เตรียมพร้อม",j3p:"คุณจะได้บัญชี Dotiva การสอนงาน รายการราคา และเดโม",j4h:"ลูกค้ารายแรก",j4p:"ATLAS หาลูกค้า Aurelia เขียนถึงเขา คุณปิดการขาย — แล้วได้เงิน",form_h:"สมัครเป็นพันธมิตร",form_name:"ชื่อของคุณ",form_contact:"LINE / เบอร์โทร / อีเมล",form_country:"ประเทศ / เมือง",form_int:"คุณสนใจอะไร? (เลือกได้หลายข้อ)",form_msg:"บอกเราว่าคุณชอบทำอะไร (ไม่บังคับ)",form_btn:"ส่งใบสมัคร",form_ok:"ขอบคุณค่ะ! ส่งใบสมัครแล้ว — Christian จะติดต่อกลับ",form_err:"ขออภัย มีบางอย่างผิดพลาด กรุณาลองใหม่ หรือติดต่อ christian@euphena.com",fi1:"เว็บไซต์และดิจิทัล",fi2:"โซเชียลมีเดีย",fi3:"เทรด",fi4:"ไอเดียของฉันเอง",foot:"สร้างด้วย ATLAS — หน้านี้คือเดโมสดของสิ่งที่เราทำ"},
+faq_eye:"คำถาม",faq_h:"คำถามที่พบบ่อย",q1:"ใช้แค่มือถือได้ไหม?",an1:"ได้ — ทุกอย่างทำงานบนมือถือ แล็ปท็อปมีก็ดี ไม่จำเป็น",q2:"ต้องมีประสบการณ์หรือความรู้เทคนิคไหม?",an2:"ไม่ต้อง เราสร้างสินค้าให้และ AI ช่วย คุณแค่คุยกับคน",q3:"เริ่มต้องจ่ายอะไรไหม?",an3:"ไม่มีค่าใช้จ่ายล่วงหน้า คุณได้เงินจากสิ่งที่ขาย",q4:"หาลูกค้าอย่างไร?",an4:"ATLAS หาลูกค้าและ Aurelia เขียนให้ — บวกเครือข่ายและ LINE ของคุณ",q5:"หารายได้ได้เท่าไหร่?",an5:"คุณเก็บส่วนใหญ่ของทุกการขาย เพิ่มขึ้นทุกลูกค้าใหม่",q6:"ทำพาร์ทไทม์ได้ไหม?",an6:"ได้ — ตามจังหวะของคุณ ควบคู่กับอย่างอื่น",
+join_eye:"สมัครเข้าร่วม",join_h:"วิธีสมัคร — ทีละขั้นตอน",join_p:"การเป็นพันธมิตรง่ายมาก — ไม่กดดัน ทำตามจังหวะคุณ",j1h:"สมัคร",j1p:"กรอกฟอร์มสั้น ๆ ด้านล่าง ส่งตรงถึง Christian",j2h:"คุยต้อนรับ",j2p:"เราคุยกันว่าคุณชอบอะไร แล้วเลือกเส้นทางไปด้วยกัน",j3h:"เตรียมพร้อม",j3p:"คุณจะได้บัญชี Dotiva การสอนงาน และเดโม",j4h:"ลูกค้ารายแรก",j4p:"ATLAS หาลูกค้า Aurelia เขียน คุณปิดการขาย — แล้วได้เงิน",
+form_h:"สมัครเป็นพันธมิตร",form_name:"ชื่อของคุณ",form_contact:"LINE / เบอร์โทร / อีเมล",form_country:"ประเทศ / เมือง",form_int:"คุณสนใจอะไร? (เลือกได้หลายข้อ)",form_msg:"บอกเราว่าคุณชอบทำอะไร (ไม่บังคับ)",form_btn:"ส่งใบสมัคร",form_ok:"ขอบคุณค่ะ! ส่งใบสมัครแล้ว — Christian จะติดต่อกลับ",form_err:"ขออภัย มีบางอย่างผิดพลาด กรุณาลองใหม่ หรือติดต่อ christian@euphena.com",fi1:"เว็บไซต์และดิจิทัล",fi2:"โซเชียลมีเดีย",fi3:"เทรด",fi4:"ไอเดีย/แอปของฉัน",
+dem_eye:"โชว์เดโม",dem_h:"ให้ดู ไม่ใช่แค่เล่า",dem_p:"เปิดเดโมสดบนมือถือให้ลูกค้าดู Christian จะให้ลิงก์และ QR จริง",d1h:"ร้านอาหาร / คาเฟ่",d2h:"โรงแรม / ที่พัก",d3h:"ร้านเสริมสวย / สปา",dslot:"[ ใส่ลิงก์/QR ]",dslot2:"[ ใส่ลิงก์/QR ]",dslot3:"[ ใส่ลิงก์/QR ]",
+cta_h:"มาเริ่มไปด้วยกัน",cta_p:"คุณไม่ได้ทำคนเดียว — เราช่วยทุกขั้นตอน และ AI ทำงานหนักแทน บอก Christian ว่าคุณชอบอะไร แล้วเริ่มลูกค้ารายแรกกัน",eco_eye:"ระบบนิเวศของเรา",eco_h:"เติบโตไปกับโลก Euphena ทั้งหมด",eco_p:"นอกจากเว็บไซต์ คุณเติบโตเข้าสู่โปรเจกต์ใหญ่ของเราได้ — ตามจังหวะคุณ พร้อมมีคนแนะนำ",be_h:"BlackEagle — บอทเทรดคริปโต",be_p:"ระบบเทรดคริปโตอัตโนมัติ ถ้าคุณสนใจตลาด Christian สอนใช้ทีละขั้น หมายเหตุ: การเทรดต้องเรียนรู้และมีความเสี่ยง ไม่ใช่รายได้ที่การันตี",eu_h:"Euphena Token — คริปโตของเราเอง",eu_p:"Euphena มีโทเคนและระบบนิเวศคริปโตของตัวเอง ในฐานะพันธมิตรคุณเป็นส่วนหนึ่งของโปรเจกต์ที่กำลังเติบโตได้ เราอธิบายทุกอย่างชัดเจน ไม่กดดัน",cta_btn:"ติดต่อ Christian",foot:"สร้างด้วย ATLAS — หน้านี้คือเดโมสดของสิ่งที่เราทำ"},
 
-en:{nav_paths:"Ways to earn",nav_engine:"The engine",nav_dotiva:"Dotiva",nav_earn:"Your share",nav_demos:"Demos",
+en:{nav_paths:"Ways to earn",nav_apps:"Apps",nav_engine:"Engine",nav_dotiva:"Dotiva",nav_faq:"FAQ",nav_join:"Join",
 hero_kick:"AI · Web · Social · Automation",hero_t1:"Build your own income",hero_t2:"with digital & AI",
-hero_sub:"Help local businesses grow with AI. You choose what you love doing — we build the product and our AI does the hard work. You keep the majority.",
-hero_cta1:"Ways to earn",hero_cta2:"How the machine helps you",hero_badge:"This site is itself an ATLAS demo — 3D, interactive, multilingual.",
+hero_sub:"Help local businesses grow with AI. You choose what you love — we build the product and our AI does the hard work. You keep the majority.",
+hero_cta1:"Ways to earn",hero_cta2:"How the work looks",hero_badge:"This site is itself an ATLAS demo — 3D, interactive, multilingual.",
 paths_eye:"Ways to earn",paths_h:"Choose your path — or mix them",paths_p:"You don't have to do only one thing. Pick what fits you and combine several. Every path earns real money and we support all of them.",
-pa1h:"Websites & Digital",pa1p:"Sell AI websites & complete digital packages to local businesses.",
-pa2h:"Social Media Marketing",pa2p:"Run content & ads on Facebook / IG / TikTok for businesses — monthly income.",
-pa3h:"Trading",pa3p:"Interested in markets? Christian teaches & supports you step by step. It takes learning — no quick riches.",
-pa4h:"Your own idea",pa4p:"Love something else? Tell us — we build a role around what you enjoy.",
-prod_eye:"What we offer",prod_h:"Products you can sell",
-p1h:"AI Websites",p1p:"A professional website in one day — mobile & LINE ready, with Google Maps.",
-p2h:"Complete Digital Package",p2p:"Website + Google Maps + LINE/social setup + AI automation.",
-p3h:"ATLAS AI Assistant",p3p:"Answers customers 24/7 in Thai — takes bookings, replies, helps sell.",
-p4h:"Social Media Marketing",p4p:"Content & ads to bring customers, managed monthly.",
-prod_more:"More products are added over time — you grow together with us.",
-prof_eye:"Your profile",prof_h:"Tell us what you love doing",prof_p:"We don't push you into one job. Tell Christian what you enjoy and what you're good at — together we design your perfect role and income around it.",
+pa1h:"Websites & Digital",pa1p:"Sell AI websites & digital packages to local businesses.",pa2h:"Social Media Marketing",pa2p:"Run content & ads on Facebook / IG / TikTok — monthly income.",pa3h:"Trading",pa3p:"Interested in markets? Christian teaches you step by step. Takes learning — no quick riches.",pa4h:"Your own idea",pa4p:"Love something else? Tell us — we build a role around it.",
+prod_eye:"What we offer",prod_h:"Products you can sell",p1h:"AI Websites",p1p:"A professional website in one day — mobile & LINE ready.",p2h:"Complete Digital Package",p2p:"Website + Google Maps + LINE/social + AI automation.",p3h:"ATLAS AI Assistant",p3p:"Answers customers 24/7 in Thai — bookings, replies, sales.",p4h:"Social Media Marketing",p4p:"Content & ads to bring customers, managed monthly.",
+apps_eye:"What we build",apps_h:"Real apps we've already built",apps_p:"This shows what's possible. If you or a customer has an idea — even a whole app — we can build it together.",
+ap1h:"Dating & Matching",ap1p:"A social app that connects and matches people.",ap2h:"Health & Wellness",ap2p:"A wellness coach app — nutrition, habits, AI support.",ap3h:"Legal AI Assistant",ap3p:"An AI assistant that helps law firms work faster.",ap4h:"Booking Platform",ap4p:"Online reservations for services, rooms & venues.",ap5h:"Real-Estate Tool",ap5p:"A smart tool for properties & listings.",ap6h:"Education Platform",ap6p:"An online learning & courses platform.",
+ap7h:"Your idea → we build it together",ap7p:"If you love an idea — an app, a shop, a service — tell us. We turn it into something real, with you.",
+prof_eye:"Your profile",prof_h:"Tell us what you love doing",prof_p:"We don't push you into one job. Tell Christian what you enjoy — together we design your perfect role and income.",
 prof_b1:"Like talking to people → Sales & customer care",prof_b2:"Creative → Social media & content",prof_b3:"Organized → Managing customers in Dotiva",prof_b4:"Curious about markets → Trading with guidance",prof_b5:"Something else → We build it with you",
-eng_eye:"The engine behind you",eng_h:"ATLAS & Aurelia do the hard work",eng_p:"You are not alone and you don't do the heavy lifting. Our AI system works for you — you focus on the people.",
-eng1h:"Finds customers",eng1p:"ATLAS researches local businesses that need what you offer.",
-eng2h:"Writes & sends",eng2p:"Aurelia writes to customers, emails & messages them in your name.",
-eng3h:"Follows up",eng3p:"Aurelia keeps following up automatically — no lead is lost.",
-eng4h:"You close",eng4p:"You do the human part — meet, show a demo, close. The machine does the rest.",
-dot_eye:"How it works with Dotiva",dot_h:"Easy — everything in one place",dot_p:"Dotiva is your workspace: all your customers, messages and deals in one simple system. Aurelia works inside it for you.",
-dneed_h:"What you need",dn1:"A phone or laptop + internet",dn2:"LINE (and Facebook if you have it)",dn3:"The will to talk to people",dn4:"Your Dotiva login (Christian gives it to you)",dneed_note:"That's it. No tech skills needed — the AI handles the rest.",
-dflow_h:"How a customer flows through",df1:"1 · Add a business in Dotiva (name & contact)",df2:"2 · ATLAS researches it, Aurelia writes the first message",df3:"3 · You approve → Aurelia sends & follows up",df4:"4 · You show a demo & close the deal",df5:"5 · Dotiva tracks everything + your earnings",
-earn_eye:"Your share",earn_h:"You keep the majority",earn_big:"You set the price. We take only a small base cost.",
-earn_lead:"We build the product for a small base cost (tech & hosting). Everything above that is yours. The better you sell, the more you keep.",
-th_prod:"Product",th_price:"Suggested price",th_base:"Base cost",th_keep:"You keep",
-r1:"AI Website (one-time)",r2:"Monthly care / hosting",r3:"Complete package",r5:"Social media (monthly)",earn_note:"* Example figures — adjustable per customer & area.",
+eng_eye:"The engine behind you",eng_h:"ATLAS & Aurelia do the hard work",eng_p:"You are not alone and you don't do the heavy lifting. Our AI works for you — you focus on the people.",
+eng1h:"Finds customers",eng1p:"ATLAS researches local businesses that need what you offer.",eng2h:"Writes & sends",eng2p:"Aurelia writes & messages customers in your name.",eng3h:"Follows up",eng3p:"Aurelia keeps following up automatically — no lead is lost.",eng4h:"You close",eng4p:"You do the human part — meet, show a demo, close.",
+dot_eye:"Your Dotiva Sales Cockpit",dot_h:"Exactly how the work looks — day by day",dot_p:"Dotiva is your sales cockpit: all your customers, messages, tasks and earnings in one simple screen. Aurelia works inside it for you. Here is exactly what you do:",
+dot_device:"<b>A phone is enough.</b> You can run everything from your mobile — a laptop is nice for bigger tasks but not required.",
+dc1h:"Open Dotiva in the morning",dc1p:"On your phone you see today's tasks: who to contact, who replied, what to follow up.",
+dc2h:"Add a business you met (30 seconds)",dc2p:"Name + LINE/phone. That's all — you met them at a shop, market or through friends.",
+dc3h:"ATLAS researches, Aurelia writes",dc3p:"ATLAS looks up the business; Aurelia drafts a friendly first message for you automatically.",
+dc4h:"You read & tap “approve”",dc4p:"You just check the message and approve — Aurelia sends it (LINE/email) and follows up on its own.",
+dc5h:"Ping when they reply",dc5p:"Dotiva pings you when a customer answers. You step in for the human conversation.",
+dc6h:"Show the demo & agree a price",dc6p:"Open the live demo on your phone, show them, agree a price you're happy with.",
+dc7h:"Tap “won” → we build → you get paid",dc7p:"We build the product; Dotiva tracks the deal and shows your earnings clearly.",
+dc_do_h:"So what do YOU actually do?",dc_do1:"Talk to people (in person or on LINE) — the part humans do best.",dc_do2:"Check & approve the messages Aurelia writes.",dc_do3:"Show a demo and close the deal.",dc_do4:"Everything technical — research, writing, follow-up, building — is automated.",
+earn_eye:"Your share",earn_h:"You keep the majority",earn_big:"You set the price. We take only a small base cost.",earn_lead:"We build the product for a small base cost (tech & hosting). Everything above that is yours.",
+th_prod:"Product",th_price:"Suggested price",th_base:"Base cost",th_keep:"You keep",r1:"AI Website (one-time)",r2:"Monthly care / hosting",r3:"Complete package",r5:"Social media (monthly)",earn_note:"* Example figures — adjustable per customer & area.",
 sup_eye:"We support you",sup_h:"You are never alone",s1h:"We build it",s1p:"We + the AI create the real product. You just talk to people.",s2h:"Training & templates",s2p:"Price lists, demos, quotes and guidance provided.",s3h:"Tech handled",s3p:"Hosting, updates, Dotiva & the AI assistant — all on us.",
-how_eye:"How to start",how_h:"Three simple steps",st1h:"Pick your path",st1p:"Tell Christian what you love — website sales, social, trading or your own idea.",st2h:"Get Dotiva & a demo",st2p:"You get your login and ready demos to show.",st3h:"Talk → we build → you get paid",st3p:"The AI finds & writes, you close, Dotiva tracks your money.",
-dem_eye:"Demos to show",dem_h:"Show, don’t tell",dem_p:"Open a live demo on your phone right in front of the customer. Christian provides the real links & QR codes.",d1h:"Restaurant / Café",d2h:"Hotel / Guesthouse",d3h:"Salon / Spa",dslot:"[ link / QR here ]",dslot2:"[ link / QR here ]",dslot3:"[ link / QR here ]",
-cta_h:"Let’s start together",cta_p:"You’re not alone — we support you every step, and the AI does the hard work. Our goal is your own steady income. Tell Christian what you love — and we start your first customer.",cta_btn:"Contact Christian",nav_join:"Join",join_eye:"Register",join_h:"How to join — step by step",join_p:"Becoming a partner is simple. Here is exactly how it works — no pressure, at your own pace.",j1h:"Sign up",j1p:"Fill the short form below — it goes straight to Christian.",j2h:"Welcome call",j2p:"We talk about what you love and choose your path together.",j3h:"Get set up",j3p:"You receive your Dotiva login, training, price lists and demos.",j4h:"First customer",j4p:"ATLAS finds leads, Aurelia writes them, you close — and get paid.",form_h:"Sign up as a partner",form_name:"Your name",form_contact:"LINE / phone / email",form_country:"Country / city",form_int:"What interests you? (choose any)",form_msg:"Tell us what you love doing (optional)",form_btn:"Send my application",form_ok:"Thank you! Your application was sent — Christian will contact you.",form_err:"Sorry, something went wrong. Please try again or email christian@euphena.com.",fi1:"Websites & Digital",fi2:"Social Media",fi3:"Trading",fi4:"My own idea",foot:"Built with ATLAS — this page is a live demo of what we create."},
+faq_eye:"Questions",faq_h:"Frequently asked",q1:"Can I work with just a phone?",an1:"Yes — everything works on your phone. A laptop is optional, not required.",q2:"Do I need experience or tech skills?",an2:"No. We build the product and the AI helps — you just talk to people.",q3:"Does it cost me anything to start?",an3:"No upfront cost to begin. You earn from what you sell.",q4:"How do I find customers?",an4:"ATLAS finds leads and Aurelia writes them — plus your own network & LINE.",q5:"How much can I earn?",an5:"You keep the majority of each sale. It grows with every customer you add.",q6:"Can I do this part-time?",an6:"Yes — at your own pace, alongside anything else.",
+join_eye:"Register",join_h:"How to join — step by step",join_p:"Becoming a partner is simple — no pressure, at your own pace.",j1h:"Sign up",j1p:"Fill the short form below — it goes straight to Christian.",j2h:"Welcome call",j2p:"We talk about what you love and choose your path together.",j3h:"Get set up",j3p:"You receive your Dotiva login, training and demos.",j4h:"First customer",j4p:"ATLAS finds leads, Aurelia writes them, you close — and get paid.",
+form_h:"Sign up as a partner",form_name:"Your name",form_contact:"LINE / phone / email",form_country:"Country / city",form_int:"What interests you? (choose any)",form_msg:"Tell us what you love doing (optional)",form_btn:"Send my application",form_ok:"Thank you! Your application was sent — Christian will contact you.",form_err:"Sorry, something went wrong. Please try again or email christian@euphena.com.",fi1:"Websites & Digital",fi2:"Social Media",fi3:"Trading",fi4:"My own idea",
+dem_eye:"Demos to show",dem_h:"Show, don’t tell",dem_p:"Open a live demo on your phone in front of the customer. Christian provides the real links & QR codes.",d1h:"Restaurant / Café",d2h:"Hotel / Guesthouse",d3h:"Salon / Spa",dslot:"[ link / QR here ]",dslot2:"[ link / QR here ]",dslot3:"[ link / QR here ]",
+cta_h:"Let’s start together",cta_p:"You’re not alone — we support you every step, and the AI does the hard work. Tell Christian what you love — and we start your first customer.",eco_eye:"Our ecosystem",eco_h:"Grow with the whole Euphena world",eco_p:"Beyond websites, you can grow into our bigger projects — at your own pace, with guidance.",be_h:"BlackEagle — Crypto Trading Bots",be_p:"An automated crypto-trading system. If markets interest you, Christian teaches you to use it step by step. Note: trading takes learning and carries risk — never a guaranteed income.",eu_h:"Euphena Token — our own crypto",eu_p:"Euphena has its own crypto token & ecosystem. As a partner you can be part of the wider project as it grows. We explain everything clearly, no pressure.",cta_btn:"Contact Christian",foot:"Built with ATLAS — this page is a live demo of what we create."},
 
-de:{nav_paths:"Verdienst-Wege",nav_engine:"Die Maschine",nav_dotiva:"Dotiva",nav_earn:"Dein Anteil",nav_demos:"Demos",
+de:{nav_paths:"Verdienst",nav_apps:"Apps",nav_engine:"Maschine",nav_dotiva:"Dotiva",nav_faq:"FAQ",nav_join:"Anmelden",
 hero_kick:"KI · Web · Social · Automatisierung",hero_t1:"Bau dir dein eigenes Einkommen",hero_t2:"mit Digital & KI",
 hero_sub:"Hilf lokalen Betrieben mit KI zu wachsen. Du wählst, was du gern machst — wir bauen das Produkt und unsere KI macht die harte Arbeit. Du behältst den Löwenanteil.",
-hero_cta1:"Verdienst-Wege",hero_cta2:"Wie die Maschine dir hilft",hero_badge:"Diese Seite ist selbst eine ATLAS-Demo — 3D, interaktiv, mehrsprachig.",
+hero_cta1:"Verdienst-Wege",hero_cta2:"So sieht die Arbeit aus",hero_badge:"Diese Seite ist selbst eine ATLAS-Demo — 3D, interaktiv, mehrsprachig.",
 paths_eye:"Verdienst-Wege",paths_h:"Wähl deinen Weg — oder misch sie",paths_p:"Du musst nicht nur eine Sache machen. Nimm, was zu dir passt, und kombiniere mehreres. Jeder Weg bringt echtes Geld und wir unterstützen alle.",
-pa1h:"Websites & Digital",pa1p:"Verkaufe KI-Websites & Digital-Komplettpakete an lokale Betriebe.",
-pa2h:"Social-Media-Marketing",pa2p:"Content & Ads auf Facebook / IG / TikTok für Betriebe — monatliches Einkommen.",
-pa3h:"Trading",pa3p:"Interesse an Märkten? Christian bringt es dir Schritt für Schritt bei. Es braucht Lernen — kein schnelles Reichwerden.",
-pa4h:"Deine eigene Idee",pa4p:"Liebst du etwas anderes? Sag es uns — wir bauen eine Rolle um das, was dir Spaß macht.",
-prod_eye:"Unser Angebot",prod_h:"Produkte, die du verkaufst",
-p1h:"KI-Websites",p1p:"Profi-Website an einem Tag — mobil & LINE-fertig, mit Google Maps.",
-p2h:"Digital-Komplettpaket",p2p:"Website + Google Maps + LINE/Social-Setup + KI-Automatisierung.",
-p3h:"ATLAS KI-Assistent",p3p:"Beantwortet Kunden 24/7 auf Thai — Buchungen, Antworten, verkauft mit.",
-p4h:"Social-Media-Marketing",p4p:"Content & Ads für mehr Kunden, monatlich betreut.",
-prod_more:"Es kommen laufend neue Produkte — du wächst mit uns.",
-prof_eye:"Dein Profil",prof_h:"Sag uns, was du gern machst",prof_p:"Wir zwingen dich in keine feste Rolle. Sag Christian, was dir Spaß macht und was du gut kannst — gemeinsam bauen wir deine perfekte Rolle und dein Einkommen drumherum.",
-prof_b1:"Redest gern mit Menschen → Vertrieb & Kundenbetreuung",prof_b2:"Kreativ → Social Media & Content",prof_b3:"Organisiert → Kunden in Dotiva betreuen",prof_b4:"Neugierig auf Märkte → Trading mit Anleitung",prof_b5:"Etwas anderes → Wir bauen es mit dir",
-eng_eye:"Die Maschine hinter dir",eng_h:"ATLAS & Aurelia machen die harte Arbeit",eng_p:"Du bist nicht allein und machst nicht die Schwerarbeit. Unser KI-System arbeitet für dich — du kümmerst dich um die Menschen.",
-eng1h:"Findet Kunden",eng1p:"ATLAS recherchiert lokale Betriebe, die dein Angebot brauchen.",
-eng2h:"Schreibt & sendet",eng2p:"Aurelia schreibt Kunden an, mailt & schreibt in deinem Namen.",
-eng3h:"Bleibt dran",eng3p:"Aurelia macht automatisch Follow-ups — kein Kontakt geht verloren.",
-eng4h:"Du machst den Abschluss",eng4p:"Du machst den menschlichen Teil — treffen, Demo zeigen, abschließen. Den Rest macht die Maschine.",
-dot_eye:"So läuft's mit Dotiva",dot_h:"Einfach — alles an einem Ort",dot_p:"Dotiva ist dein Arbeitsplatz: alle Kunden, Nachrichten und Deals in einem einfachen System. Aurelia arbeitet darin für dich.",
-dneed_h:"Was du brauchst",dn1:"Handy oder Laptop + Internet",dn2:"LINE (und Facebook, falls vorhanden)",dn3:"Die Bereitschaft, mit Menschen zu reden",dn4:"Deinen Dotiva-Zugang (bekommst du von Christian)",dneed_note:"Das war's. Keine Technik-Kenntnisse nötig — die KI macht den Rest.",
-dflow_h:"Wie ein Kunde durchläuft",df1:"1 · Betrieb in Dotiva anlegen (Name & Kontakt)",df2:"2 · ATLAS recherchiert, Aurelia schreibt die erste Nachricht",df3:"3 · Du gibst frei → Aurelia sendet & bleibt dran",df4:"4 · Du zeigst eine Demo & schließt ab",df5:"5 · Dotiva trackt alles + dein Einkommen",
-earn_eye:"Dein Anteil",earn_h:"Du behältst den Löwenanteil",earn_big:"Du setzt den Preis. Wir nehmen nur einen kleinen Sockel.",
-earn_lead:"Wir bauen das Produkt für einen kleinen Sockelpreis (Technik & Hosting). Alles darüber gehört dir. Je besser du verkaufst, desto mehr behältst du.",
-th_prod:"Produkt",th_price:"Empf. Preis",th_base:"Sockel",th_keep:"Du behältst",
-r1:"KI-Website (einmalig)",r2:"Monatliche Pflege/Hosting",r3:"Komplettpaket",r5:"Social Media (monatlich)",earn_note:"* Beispielzahlen — anpassbar je Kunde & Region.",
+pa1h:"Websites & Digital",pa1p:"Verkaufe KI-Websites & Digital-Pakete an lokale Betriebe.",pa2h:"Social-Media-Marketing",pa2p:"Content & Ads auf Facebook / IG / TikTok — monatliches Einkommen.",pa3h:"Trading",pa3p:"Interesse an Märkten? Christian bringt es dir Schritt für Schritt bei. Braucht Lernen — kein schnelles Reichwerden.",pa4h:"Deine eigene Idee",pa4p:"Liebst du etwas anderes? Sag es uns — wir bauen eine Rolle darum.",
+prod_eye:"Unser Angebot",prod_h:"Produkte, die du verkaufst",p1h:"KI-Websites",p1p:"Profi-Website an einem Tag — mobil & LINE-fertig.",p2h:"Digital-Komplettpaket",p2p:"Website + Google Maps + LINE/Social + KI-Automatisierung.",p3h:"ATLAS KI-Assistent",p3p:"Beantwortet Kunden 24/7 auf Thai — Buchungen, Antworten, Verkauf.",p4h:"Social-Media-Marketing",p4p:"Content & Ads für mehr Kunden, monatlich betreut.",
+apps_eye:"Was wir bauen",apps_h:"Echte Apps, die wir schon gebaut haben",apps_p:"Das zeigt, was möglich ist. Wenn du oder ein Kunde eine Idee hat — sogar eine ganze App — bauen wir sie gemeinsam.",
+ap1h:"Dating & Matching",ap1p:"Eine Social-App, die Menschen verbindet und matcht.",ap2h:"Gesundheit & Wellness",ap2p:"Eine Wellness-Coach-App — Ernährung, Gewohnheiten, KI.",ap3h:"Legal-KI-Assistent",ap3p:"Ein KI-Assistent, der Kanzleien schneller macht.",ap4h:"Buchungsplattform",ap4p:"Online-Reservierungen für Services, Zimmer & Locations.",ap5h:"Immobilien-Tool",ap5p:"Ein smartes Tool für Immobilien & Inserate.",ap6h:"Bildungsplattform",ap6p:"Eine Plattform für Online-Lernen & Kurse.",
+ap7h:"Deine Idee → wir bauen sie gemeinsam",ap7p:"Wenn du eine Idee liebst — App, Shop oder Service — sag es uns. Wir machen etwas Echtes daraus, mit dir.",
+prof_eye:"Dein Profil",prof_h:"Sag uns, was du gern machst",prof_p:"Wir zwingen dich in keine feste Rolle. Sag Christian, was dir Spaß macht — gemeinsam bauen wir deine perfekte Rolle und dein Einkommen.",
+prof_b1:"Redest gern mit Menschen → Vertrieb & Betreuung",prof_b2:"Kreativ → Social Media & Content",prof_b3:"Organisiert → Kunden in Dotiva betreuen",prof_b4:"Neugierig auf Märkte → Trading mit Anleitung",prof_b5:"Etwas anderes → Wir bauen es mit dir",
+eng_eye:"Die Maschine hinter dir",eng_h:"ATLAS & Aurelia machen die harte Arbeit",eng_p:"Du bist nicht allein und machst nicht die Schwerarbeit. Unsere KI arbeitet für dich — du kümmerst dich um die Menschen.",
+eng1h:"Findet Kunden",eng1p:"ATLAS recherchiert lokale Betriebe, die dein Angebot brauchen.",eng2h:"Schreibt & sendet",eng2p:"Aurelia schreibt & kontaktiert Kunden in deinem Namen.",eng3h:"Bleibt dran",eng3p:"Aurelia macht automatisch Follow-ups — kein Kontakt geht verloren.",eng4h:"Du schließt ab",eng4p:"Du machst den menschlichen Teil — treffen, Demo zeigen, abschließen.",
+dot_eye:"Dein Dotiva Sales Cockpit",dot_h:"Genau so sieht die Arbeit aus — Tag für Tag",dot_p:"Dotiva ist dein Verkaufs-Cockpit: alle Kunden, Nachrichten, Aufgaben und Einnahmen in einem einfachen Screen. Aurelia arbeitet darin für dich. Das machst du genau:",
+dot_device:"<b>Ein Handy reicht.</b> Du kannst alles vom Handy aus machen — ein Laptop ist für größere Aufgaben nett, aber nicht nötig.",
+dc1h:"Morgens Dotiva öffnen",dc1p:"Am Handy siehst du die Aufgaben des Tages: wen kontaktieren, wer geantwortet hat, was nachzufassen ist.",
+dc2h:"Betrieb eintragen, den du getroffen hast (30 Sek.)",dc2p:"Name + LINE/Telefon. Mehr nicht — getroffen im Laden, am Markt oder über Freunde.",
+dc3h:"ATLAS recherchiert, Aurelia schreibt",dc3p:"ATLAS schaut den Betrieb nach; Aurelia entwirft automatisch eine freundliche erste Nachricht.",
+dc4h:"Du liest & tippst „freigeben“",dc4p:"Du prüfst die Nachricht nur und gibst frei — Aurelia sendet (LINE/E-Mail) und fasst selbst nach.",
+dc5h:"Ping, wenn geantwortet wird",dc5p:"Dotiva pingt dich, wenn ein Kunde antwortet. Dann übernimmst du das menschliche Gespräch.",
+dc6h:"Demo zeigen & Preis vereinbaren",dc6p:"Öffne die Live-Demo am Handy, zeig sie, vereinbare einen Preis, mit dem du zufrieden bist.",
+dc7h:"„gewonnen“ tippen → wir bauen → du wirst bezahlt",dc7p:"Wir bauen das Produkt; Dotiva trackt den Deal und zeigt deine Einnahmen klar.",
+dc_do_h:"Was machst also DU wirklich?",dc_do1:"Mit Menschen reden (persönlich oder per LINE) — was Menschen am besten können.",dc_do2:"Die Nachrichten von Aurelia prüfen & freigeben.",dc_do3:"Eine Demo zeigen und abschließen.",dc_do4:"Alles Technische — Recherche, Schreiben, Nachfassen, Bauen — ist automatisiert.",
+earn_eye:"Dein Anteil",earn_h:"Du behältst den Löwenanteil",earn_big:"Du setzt den Preis. Wir nehmen nur einen kleinen Sockel.",earn_lead:"Wir bauen das Produkt für einen kleinen Sockelpreis (Technik & Hosting). Alles darüber gehört dir.",
+th_prod:"Produkt",th_price:"Empf. Preis",th_base:"Sockel",th_keep:"Du behältst",r1:"KI-Website (einmalig)",r2:"Monatliche Pflege/Hosting",r3:"Komplettpaket",r5:"Social Media (monatlich)",earn_note:"* Beispielzahlen — anpassbar je Kunde & Region.",
 sup_eye:"Wir unterstützen dich",sup_h:"Du bist nie allein",s1h:"Wir bauen es",s1p:"Wir + die KI bauen das echte Produkt. Du sprichst nur mit Menschen.",s2h:"Training & Vorlagen",s2p:"Preislisten, Demos, Angebote und Anleitung inklusive.",s3h:"Technik erledigt",s3p:"Hosting, Updates, Dotiva & der KI-Assistent — übernehmen wir.",
-how_eye:"So startest du",how_h:"Drei einfache Schritte",st1h:"Wähl deinen Weg",st1p:"Sag Christian, was du liebst — Website-Verkauf, Social, Trading oder deine eigene Idee.",st2h:"Dotiva & Demo bekommen",st2p:"Du erhältst deinen Zugang und fertige Demos zum Zeigen.",st3h:"Reden → wir bauen → du wirst bezahlt",st3p:"Die KI findet & schreibt, du schließt ab, Dotiva trackt dein Geld.",
-dem_eye:"Demos zum Zeigen",dem_h:"Zeigen statt erzählen",dem_p:"Öffne eine Live-Demo direkt am Handy vor dem Kunden. Christian liefert die echten Links & QR-Codes.",d1h:"Restaurant / Café",d2h:"Hotel / Pension",d3h:"Salon / Spa",dslot:"[ Link / QR hier ]",dslot2:"[ Link / QR hier ]",dslot3:"[ Link / QR hier ]",
-cta_h:"Lass uns gemeinsam starten",cta_p:"Du bist nicht allein — wir begleiten dich bei jedem Schritt, und die KI macht die harte Arbeit. Unser Ziel: dein eigenes, stabiles Einkommen. Sag Christian, was du liebst — und wir starten deinen ersten Kunden.",cta_btn:"Christian kontaktieren",nav_join:"Anmelden",join_eye:"Anmeldung",join_h:"So machst du mit — Schritt für Schritt",join_p:"Partnerin zu werden ist einfach. So läuft es genau — ohne Druck, in deinem Tempo.",j1h:"Anmelden",j1p:"Fülle das kurze Formular unten aus — es geht direkt an Christian.",j2h:"Willkommensgespräch",j2p:"Wir reden über das, was du gern machst, und wählen gemeinsam deinen Weg.",j3h:"Startklar machen",j3p:"Du bekommst deinen Dotiva-Zugang, Training, Preislisten und Demos.",j4h:"Erste Kundin",j4p:"ATLAS findet Leads, Aurelia schreibt sie an, du schließt ab — und wirst bezahlt.",form_h:"Als Partnerin anmelden",form_name:"Dein Name",form_contact:"LINE / Telefon / E-Mail",form_country:"Land / Stadt",form_int:"Was interessiert dich? (mehrere möglich)",form_msg:"Sag uns, was du gern machst (optional)",form_btn:"Anmeldung senden",form_ok:"Danke! Deine Anmeldung wurde gesendet — Christian meldet sich.",form_err:"Etwas ist schiefgelaufen. Bitte nochmal versuchen oder christian@euphena.com.",fi1:"Websites & Digital",fi2:"Social Media",fi3:"Trading",fi4:"Meine eigene Idee",foot:"Gebaut mit ATLAS — diese Seite ist eine Live-Demo dessen, was wir erstellen."}
+faq_eye:"Fragen",faq_h:"Häufige Fragen",q1:"Reicht ein Handy?",an1:"Ja — alles läuft am Handy. Ein Laptop ist optional, nicht nötig.",q2:"Brauche ich Erfahrung oder Technik-Wissen?",an2:"Nein. Wir bauen das Produkt und die KI hilft — du sprichst nur mit Menschen.",q3:"Kostet mich der Start etwas?",an3:"Kein Vorab-Kosten zum Starten. Du verdienst an dem, was du verkaufst.",q4:"Wie finde ich Kunden?",an4:"ATLAS findet Leads und Aurelia schreibt sie an — plus dein Netzwerk & LINE.",q5:"Wie viel kann ich verdienen?",an5:"Du behältst den Großteil jedes Verkaufs. Es wächst mit jedem Kunden.",q6:"Geht das nebenberuflich?",an6:"Ja — in deinem Tempo, neben allem anderen.",
+join_eye:"Anmeldung",join_h:"So machst du mit — Schritt für Schritt",join_p:"Partnerin zu werden ist einfach — ohne Druck, in deinem Tempo.",j1h:"Anmelden",j1p:"Fülle das kurze Formular unten aus — es geht direkt an Christian.",j2h:"Willkommensgespräch",j2p:"Wir reden über das, was du gern machst, und wählen gemeinsam deinen Weg.",j3h:"Startklar machen",j3p:"Du bekommst deinen Dotiva-Zugang, Training und Demos.",j4h:"Erste Kundin",j4p:"ATLAS findet Leads, Aurelia schreibt sie an, du schließt ab — und wirst bezahlt.",
+form_h:"Als Partnerin anmelden",form_name:"Dein Name",form_contact:"LINE / Telefon / E-Mail",form_country:"Land / Stadt",form_int:"Was interessiert dich? (mehrere möglich)",form_msg:"Sag uns, was du gern machst (optional)",form_btn:"Anmeldung senden",form_ok:"Danke! Deine Anmeldung wurde gesendet — Christian meldet sich.",form_err:"Etwas ist schiefgelaufen. Bitte nochmal versuchen oder christian@euphena.com.",fi1:"Websites & Digital",fi2:"Social Media",fi3:"Trading",fi4:"Meine eigene Idee",
+dem_eye:"Demos zum Zeigen",dem_h:"Zeigen statt erzählen",dem_p:"Öffne eine Live-Demo am Handy vor dem Kunden. Christian liefert die echten Links & QR-Codes.",d1h:"Restaurant / Café",d2h:"Hotel / Pension",d3h:"Salon / Spa",dslot:"[ Link / QR hier ]",dslot2:"[ Link / QR hier ]",dslot3:"[ Link / QR hier ]",
+cta_h:"Lass uns gemeinsam starten",cta_p:"Du bist nicht allein — wir begleiten dich bei jedem Schritt, und die KI macht die harte Arbeit. Sag Christian, was du liebst — und wir starten deine erste Kundin.",eco_eye:"Unser Ökosystem",eco_h:"Wachse mit der ganzen Euphena-Welt",eco_p:"Über Websites hinaus kannst du in unsere größeren Projekte hineinwachsen — in deinem Tempo, mit Anleitung.",be_h:"BlackEagle — Krypto-Trading-Bots",be_p:"Ein automatisiertes Krypto-Trading-System. Wenn dich Märkte interessieren, bringt Christian dir Schritt für Schritt bei, es zu nutzen. Hinweis: Trading braucht Lernen und birgt Risiko — nie ein garantiertes Einkommen.",eu_h:"Euphena Token — unsere eigene Krypto",eu_p:"Euphena hat einen eigenen Krypto-Token & ein Ökosystem. Als Partnerin kannst du Teil des wachsenden Projekts sein. Wir erklären alles klar, ohne Druck.",cta_btn:"Christian kontaktieren",foot:"Gebaut mit ATLAS — diese Seite ist eine Live-Demo dessen, was wir erstellen."}
 };
 let cur='th';
-function setLang(l){cur=l;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(el=>{const t=I[l][el.getAttribute('data-i')];if(t!==undefined)el.textContent=t;});document.querySelectorAll('[data-ph]').forEach(el=>{const t=I[l][el.getAttribute('data-ph')];if(t!==undefined)el.setAttribute('placeholder',t);});document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-l')===l));}
+function setLang(l){cur=l;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(el=>{const t=I[l][el.getAttribute('data-i')];if(t!==undefined){if(t.indexOf('<b>')>=0)el.innerHTML=t;else el.textContent=t;}});document.querySelectorAll('[data-ph]').forEach(el=>{const t=I[l][el.getAttribute('data-ph')];if(t!==undefined)el.setAttribute('placeholder',t);});document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-l')===l));if(window.applyChatLang)applyChatLang();}
 document.getElementById('lang').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setLang(b.getAttribute('data-l'));});
-setLang('th');
-const SIGNUP_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-signup";
-const ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBybml3bHpyY2VqYXJybHR4ZnRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMTQxMjEsImV4cCI6MjA5NTc5MDEyMX0.22qFWQbHPoLjgH3OBGRkon8i4iO8jVedXWtRxzxVc54";
-(function(){const F=document.getElementById('signup');if(!F)return;F.addEventListener('submit',async e=>{e.preventDefault();const btn=F.querySelector('button');const m=document.getElementById('formmsg');btn.disabled=true;const fd=new FormData(F);const interests=[...F.querySelectorAll('input[name=interest]:checked')].map(x=>x.value);try{const r=await fetch(SIGNUP_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({name:fd.get('name'),contact:fd.get('contact'),country:fd.get('country'),interests,message:fd.get('message'),lang:cur})});const d=await r.json();if(d&&d.ok){m.textContent=I[cur].form_ok;m.style.color='#34e2b0';F.reset();}else{m.textContent=I[cur].form_err;m.style.color='#ff8585';}}catch(_){m.textContent=I[cur].form_err;m.style.color='#ff8585';}btn.disabled=false;});})();
+
 const io=new IntersectionObserver((es)=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const SIGNUP_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-signup";
+const CHAT_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-chat";
+const EVENT_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-event";
+const ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBybml3bHpyY2VqYXJybHR4ZnRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMTQxMjEsImV4cCI6MjA5NTc5MDEyMX0.22qFWQbHPoLjgH3OBGRkon8i4iO8jVedXWtRxzxVc54";
+const SID=(function(){try{let s=localStorage.getItem('atlas_sid');if(!s){s=Math.random().toString(36).slice(2)+Date.now().toString(36);localStorage.setItem('atlas_sid',s);}return s;}catch(_){return 'anon'+Date.now();}})();
+function ev(event,detail){try{fetch(EVENT_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({session_id:SID,lang:cur,event,detail:(detail||'').toString()}),keepalive:true});}catch(_){}}
+
+const _f=document.getElementById('signup');
+if(_f)_f.addEventListener('submit',async e=>{e.preventDefault();const btn=_f.querySelector('button');const m=document.getElementById('formmsg');btn.disabled=true;const fd=new FormData(_f);const interests=[..._f.querySelectorAll('input[name=interest]:checked')].map(x=>x.value);try{const r=await fetch(SIGNUP_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({name:fd.get('name'),contact:fd.get('contact'),country:fd.get('country'),interests,message:fd.get('message'),lang:cur})});const d=await r.json();if(d&&d.ok){m.textContent=I[cur].form_ok;m.style.color='#34e2b0';_f.reset();}else{m.textContent=I[cur].form_err;m.style.color='#ff8585';}}catch(_){m.textContent=I[cur].form_err;m.style.color='#ff8585';}btn.disabled=false;});
+document.querySelectorAll('input[name=interest]').forEach(c=>c.addEventListener('change',()=>{if(c.checked)ev('interest',c.value);}));
+
+const CHAT={th:{title:'แชทกับ ATLAS',ph:'พิมพ์คำถามของคุณ...',send:'ส่ง',hello:'สวัสดีค่ะ! ฉันคือ ATLAS 😊 คุณสนใจหารายได้แบบไหนคะ? หรือถามอะไรก็ได้เลย',chips:['เว็บไซต์','โซเชียล','เทรด','ยังไม่แน่ใจ']},en:{title:'Chat with ATLAS',ph:'Type your question...',send:'Send',hello:'Hi! I’m ATLAS 😊 Which way of earning interests you? Or ask me anything.',chips:['Websites','Social','Trading','Not sure']},de:{title:'Chat mit ATLAS',ph:'Stell deine Frage...',send:'Senden',hello:'Hi! Ich bin ATLAS 😊 Welcher Verdienst-Weg interessiert dich? Oder frag mich alles.',chips:['Websites','Social','Trading','Unsicher']}};
+const _btn=document.getElementById('chatbtn'),_panel=document.getElementById('chatpanel'),_body=document.getElementById('cbody'),_input=document.getElementById('cinput'),_send=document.getElementById('csend');
+function applyChatLang(){const c=CHAT[cur]||CHAT.en;document.getElementById('ctitle').textContent=c.title;_input.placeholder=c.ph;_send.textContent=c.send;}
+window.applyChatLang=applyChatLang;
+let _hist=[],_opened=false;
+function _add(t,who){const d=document.createElement('div');d.className='msg '+(who==='u'?'u':'a');d.textContent=t;_body.appendChild(d);_body.scrollTop=_body.scrollHeight;return d;}
+function _chips(){const c=CHAT[cur]||CHAT.en;const wrap=document.createElement('div');wrap.className='msg a chips';c.chips.forEach(t=>{const b=document.createElement('span');b.className='chip';b.textContent=t;b.onclick=()=>{wrap.remove();ev('interest',t);_ask(t);};wrap.appendChild(b);});_body.appendChild(wrap);_body.scrollTop=_body.scrollHeight;}
+_btn.addEventListener('click',()=>{_panel.classList.toggle('open');if(_panel.classList.contains('open')&&!_opened){_opened=true;_add((CHAT[cur]||CHAT.en).hello,'a');_chips();ev('chat_open');}});
+async function _ask(m){if(!m)return;_add(m,'u');_hist.push({role:'user',text:m});_input.value='';ev('chat_msg',m.slice(0,90));const w=_add('…','a');try{const r=await fetch(CHAT_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({message:m,lang:cur,session_id:SID,history:_hist})});const d=await r.json();w.textContent=d.reply||'...';_hist.push({role:'atlas',text:d.reply||''});}catch(_){w.textContent=cur==='th'?'ขออภัย ลองใหม่นะคะ':(cur==='de'?'Bitte nochmal versuchen.':'Sorry, please try again.');}_body.scrollTop=_body.scrollHeight;}
+_send.addEventListener('click',()=>_ask(_input.value.trim()));_input.addEventListener('keydown',e=>{if(e.key==='Enter')_ask(_input.value.trim());});
+
+setLang('th');
+ev('view',document.title);
+const _seen={};const _sio=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const id=x.target.id;if(id&&!_seen[id]){_seen[id]=1;ev('read',id);}}}),{threshold:.5});
+document.querySelectorAll('section[id]').forEach(s=>_sio.observe(s));
+document.getElementById('lang').addEventListener('click',e=>{const b=e.target.closest('button');if(b)ev('lang',b.getAttribute('data-l'));});
+
 (function(){
   const canvas=document.getElementById('bg');
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
@@ -436,28 +479,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   function resize(){renderer.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();}addEventListener('resize',resize);resize();
   (function loop(t){t*=.001;pts.rotation.y=t*.03;pts2.rotation.y=-t*.02;ico.rotation.x=t*.15;ico.rotation.y=t*.2;ico2.rotation.x=-t*.2;ico2.rotation.y=-t*.15;ico.scale.setScalar(1+Math.sin(t*1.2)*.04);cam.position.x+=(mx*3-cam.position.x)*.04;cam.position.y+=(-my*2-cam.position.y)*.04;cam.position.z=14+Math.min(sy,1200)*.004;cam.lookAt(0,0,0);renderer.render(scene,cam);requestAnimationFrame(loop);})(0);
 })();
-
-/* ---------- Chat + Interessen-Tracking ---------- */
-const CHAT_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-chat";
-const EVENT_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-event";
-const SID=(function(){try{let s=localStorage.getItem('atlas_sid');if(!s){s=Math.random().toString(36).slice(2)+Date.now().toString(36);localStorage.setItem('atlas_sid',s);}return s;}catch(_){return 'anon'+Date.now();}})();
-function ev(event,detail){try{fetch(EVENT_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({session_id:SID,lang:cur,event,detail:(detail||'').toString()}),keepalive:true});}catch(_){}}
-ev('view',document.title);
-const _seen={};const _sio=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const id=x.target.id;if(id&&!_seen[id]){_seen[id]=1;ev('read',id);}}}),{threshold:.5});
-document.querySelectorAll('section[id]').forEach(s=>_sio.observe(s));
-document.getElementById('lang').addEventListener('click',e=>{const b=e.target.closest('button');if(b)ev('lang',b.getAttribute('data-l'));});
-document.querySelectorAll('input[name=interest]').forEach(c=>c.addEventListener('change',()=>{if(c.checked)ev('interest',c.value);}));
-
-const CHAT={th:{title:'แชทกับ ATLAS',ph:'พิมพ์คำถามของคุณ...',send:'ส่ง',hello:'สวัสดีค่ะ! ถามอะไรก็ได้เกี่ยวกับการหารายได้กับเรา 😊'},en:{title:'Chat with ATLAS',ph:'Type your question...',send:'Send',hello:'Hi! Ask me anything about earning with us 😊'},de:{title:'Chat mit ATLAS',ph:'Stell deine Frage...',send:'Senden',hello:'Hi! Frag mich alles rund ums Verdienen mit uns 😊'}};
-const _btn=document.getElementById('chatbtn'),_panel=document.getElementById('chatpanel'),_body=document.getElementById('cbody'),_input=document.getElementById('cinput'),_send=document.getElementById('csend');
-function applyChatLang(){const c=CHAT[cur]||CHAT.en;document.getElementById('ctitle').textContent=c.title;_input.placeholder=c.ph;_send.textContent=c.send;}
-applyChatLang();
-document.getElementById('lang').addEventListener('click',()=>setTimeout(applyChatLang,0));
-let _hist=[],_opened=false;
-function _add(t,who){const d=document.createElement('div');d.className='msg '+(who==='u'?'u':'a');d.textContent=t;_body.appendChild(d);_body.scrollTop=_body.scrollHeight;return d;}
-_btn.addEventListener('click',()=>{_panel.classList.toggle('open');if(_panel.classList.contains('open')&&!_opened){_opened=true;_add((CHAT[cur]||CHAT.en).hello,'a');ev('chat_open');}});
-async function _sendMsg(){const m=_input.value.trim();if(!m)return;_add(m,'u');_hist.push({role:'user',text:m});_input.value='';ev('chat_msg',m.slice(0,90));const w=_add('…','a');try{const r=await fetch(CHAT_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({message:m,lang:cur,session_id:SID,history:_hist})});const d=await r.json();w.textContent=d.reply||'...';_hist.push({role:'atlas',text:d.reply||''});}catch(_){w.textContent=(CHAT[cur]||CHAT.en)==CHAT.th?'ขออภัย ลองใหม่นะคะ':'Sorry, please try again.';}_body.scrollTop=_body.scrollHeight;}
-_send.addEventListener('click',_sendMsg);_input.addEventListener('keydown',e=>{if(e.key==='Enter')_sendMsg();});
 </script>
 </body>
 </html>
