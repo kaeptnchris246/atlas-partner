@@ -2,76 +2,151 @@
 <html lang="th">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ไอเดียหารายได้ · Business Ideas — Euphena × ATLAS</title>
+<title>หาทางหารายได้ของคุณ · Find Your Earning Path — Euphena × ATLAS</title>
 <style>
   :root{--bg:#05070f;--cyan:#22d3ee;--violet:#a78bff;--pv:#7c3aed;--ink:#eaf2ff;--mut:#93a4c8;--card:rgba(255,255,255,.04);--line:rgba(120,160,255,.14)}
   *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
   body{font-family:"Helvetica Neue",Arial,"Thonburi","Leelawadee UI",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
-  #bg{position:fixed;inset:0;z-index:0}.glow{position:fixed;z-index:1;pointer-events:none;filter:blur(90px);opacity:.45}
-  .g1{top:-10%;left:-8%;width:46vw;height:46vw;background:radial-gradient(circle,rgba(34,211,238,.28),transparent 60%)}
+  #bg{position:fixed;inset:0;z-index:0}.glow{position:fixed;z-index:1;pointer-events:none;filter:blur(90px);opacity:.4}
+  .g1{top:-10%;left:-8%;width:46vw;height:46vw;background:radial-gradient(circle,rgba(34,211,238,.26),transparent 60%)}
   .g2{bottom:-15%;right:-10%;width:52vw;height:52vw;background:radial-gradient(circle,rgba(124,58,237,.3),transparent 60%)}
-  .wrap{position:relative;z-index:3;max-width:1040px;margin:0 auto;padding:0 24px}
+  .wrap{position:relative;z-index:3;max-width:920px;margin:0 auto;padding:0 20px}
   nav{position:fixed;top:0;left:0;right:0;z-index:20;backdrop-filter:blur(12px);background:linear-gradient(180deg,rgba(5,7,15,.88),rgba(5,7,15,.3));border-bottom:1px solid var(--line)}
-  .nav-in{max-width:1040px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between}
+  .nav-in{max-width:920px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between}
   .brand{font-weight:800;letter-spacing:2px;font-size:14px}.brand b{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
   .back{color:var(--mut);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:8px 15px;border-radius:999px}.back:hover{color:var(--cyan);border-color:var(--cyan)}
-  header{padding:140px 0 24px;text-align:center}
-  .kick{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line);border-radius:999px;padding:7px 15px;margin-bottom:20px;background:rgba(34,211,238,.06)}
-  h1{font-size:clamp(34px,6vw,62px);line-height:1.05;font-weight:800;letter-spacing:-1px}
+  header{padding:130px 0 10px;text-align:center}
+  .kick{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line);border-radius:999px;padding:7px 15px;margin-bottom:18px;background:rgba(34,211,238,.06)}
+  h1{font-size:clamp(30px,5.4vw,52px);line-height:1.08;font-weight:800;letter-spacing:-1px}
   h1 .g{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
   .en{color:var(--mut)}
-  header .sub{max-width:640px;margin:20px auto 0;font-size:17px;color:var(--mut)}.sub .en{display:block;font-size:14px;margin-top:6px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:28px 0}
-  @media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.grid{grid-template-columns:1fr}}
+  header .sub{max-width:600px;margin:16px auto 0;font-size:16px;color:var(--mut)}.sub .en{display:block;font-size:13.5px;margin-top:5px}
+
+  /* Conversation */
+  .conv{background:linear-gradient(180deg,rgba(12,18,35,.8),rgba(8,12,25,.9));border:1px solid var(--line);border-radius:24px;margin:28px 0 10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+  .chead{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;font-weight:800}
+  .chead .orb{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#67e8f9,#7c3aed);box-shadow:0 0 18px rgba(34,211,238,.5);animation:pulse 3s infinite}
+  .chead small{color:var(--mut);font-weight:500;font-size:12px;display:block}
+  .cbody{padding:18px;min-height:230px;max-height:440px;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+  .msg{max-width:82%;padding:11px 15px;border-radius:14px;font-size:14.5px;line-height:1.55}
+  .msg.a{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+  .msg.u{align-self:flex-end;background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 6px}
+  .chip{font-size:13px;border:1px solid var(--line);background:rgba(34,211,238,.08);color:var(--cyan);border-radius:999px;padding:8px 14px;cursor:pointer;transition:.2s}
+  .chip:hover{background:rgba(34,211,238,.18)}
+  .cfoot{display:flex;gap:8px;padding:14px 18px;border-top:1px solid var(--line)}
+  .cfoot input{flex:1;background:rgba(5,7,15,.6);border:1px solid var(--line);border-radius:12px;color:var(--ink);font:inherit;font-size:14px;padding:12px 14px}
+  .cfoot input:focus{outline:none;border-color:var(--cyan)}
+  .cfoot button{background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;border:0;border-radius:12px;font:inherit;font-weight:800;padding:0 18px;cursor:pointer}
+  .hint{text-align:center;color:var(--mut);font-size:13px;margin:6px 0 30px}
+
+  section{padding:26px 0;position:relative;z-index:3}
+  .eye{color:var(--cyan);letter-spacing:2px;text-transform:uppercase;font-size:12px;font-weight:700}
+  h2{font-size:clamp(23px,4vw,34px);font-weight:800;margin-top:8px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}@media(max-width:720px){.grid{grid-template-columns:1fr}}
   .idea{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;opacity:0;transform:translateY(22px);transition:.6s}
   .idea.in{opacity:1;transform:none}.idea:hover{border-color:rgba(34,211,238,.4)}
-  .idea .ic{font-size:26px}.idea h3{font-size:17px;font-weight:800;margin-top:10px}.idea p{color:var(--mut);font-size:13.5px;margin-top:6px}.idea p .en{display:block;color:#7f8ca8;font-size:12px;margin-top:3px}
-  .earn{margin-top:12px;font-size:12.5px;color:#34e2b0;font-weight:700}
-  .final{text-align:center;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(34,211,238,.12));border:1px solid var(--line);border-radius:24px;padding:50px 26px;margin:20px 0 30px}
-  .final h2{font-size:clamp(24px,4.5vw,38px)}.final p{color:var(--mut);max-width:580px;margin:14px auto 0}.final p .en{display:block;font-size:13px;margin-top:6px}
-  .btn{display:inline-block;margin-top:22px;background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;font-weight:800;padding:14px 28px;border-radius:12px;text-decoration:none}
-  .chathint{text-align:center;color:var(--mut);font-size:14px;margin:0 0 50px;padding:16px;border:1px dashed var(--line);border-radius:14px}
-  .chathint b{color:var(--cyan)}
-  footer{border-top:1px solid var(--line);padding:24px;color:var(--mut);font-size:12px;text-align:center;position:relative;z-index:3;max-width:1040px;margin:0 auto}
+  .idea .top{display:flex;align-items:center;gap:12px}.idea .ic{font-size:26px}.idea h3{font-size:17px;font-weight:800}
+  .idea .row{margin-top:12px;font-size:13.5px;color:var(--mut)}.idea .row b{color:var(--ink)}
+  .idea .earn{margin-top:10px;font-size:13px;color:#34e2b0;font-weight:700}
+  .final{text-align:center;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(34,211,238,.12));border:1px solid var(--line);border-radius:24px;padding:48px 26px;margin:24px 0 50px}
+  .final h2{font-size:clamp(23px,4.5vw,36px)}.final p{color:var(--mut);max-width:560px;margin:14px auto 0}.final p .en{display:block;font-size:13px;margin-top:6px}
+  .btn{display:inline-block;margin-top:20px;background:linear-gradient(135deg,var(--cyan),var(--pv));color:#040713;font-weight:800;padding:14px 28px;border-radius:12px;text-decoration:none}
+  footer{border-top:1px solid var(--line);padding:24px;color:var(--mut);font-size:12px;text-align:center;position:relative;z-index:3;max-width:920px;margin:0 auto}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
 </style></head>
 <body>
 <canvas id="bg"></canvas><div class="glow g1"></div><div class="glow g2"></div>
 <nav><div class="nav-in"><div class="brand">EUPHENA <b>× ATLAS</b></div><a class="back" href="./index.html">← กลับ / Back</a></div></nav>
 
 <header><div class="wrap">
-  <span class="kick">Business Ideas · หลายทางหารายได้</span>
-  <h1>ไอเดีย <span class="g">หารายได้</span> ด้วยกัน</h1>
-  <p class="sub">มีหลายวิธีที่คุณสร้างรายได้กับเราได้ — เลือกที่ชอบ ผสมกันก็ได้ และถ้าคุณมีไอเดียเอง เราพัฒนาไปด้วยกัน
-    <span class="en">There are many ways to earn with us — pick what you love, combine them, and if you have your own idea, we develop it together.</span></p>
+  <span class="kick">Idea Finder · คุยกับ ATLAS</span>
+  <h1>มาหา <span class="g">ทางหารายได้</span> ที่ใช่สำหรับคุณ</h1>
+  <p class="sub">คุยกับ ATLAS สั้น ๆ แล้วเราจะช่วยหาว่างานแบบไหนเหมาะกับคุณที่สุด — และคิดไอเดียไปด้วยกัน
+    <span class="en">Have a short chat with ATLAS and we'll help find the path that fits you best — and brainstorm ideas together.</span></p>
 </div></header>
 
-<section class="wrap"><div class="grid">
-  <div class="idea"><div class="ic">🌐</div><h3>เว็บไซต์ให้ธุรกิจท้องถิ่น</h3><p>สร้างเว็บ AI ให้ร้านอาหาร ร้านค้า โรงแรม <span class="en">AI websites for restaurants, shops, hotels.</span></p><div class="earn">฿6,000–13,000 / ลูกค้า</div></div>
-  <div class="idea"><div class="ic">📣</div><h3>ดูแลโซเชียลมีเดีย</h3><p>คอนเทนต์ + โฆษณา รายเดือน <span class="en">Social content & ads, monthly.</span></p><div class="earn">฿3,500–13,500 / เดือน</div></div>
-  <div class="idea"><div class="ic">📍</div><h3>Google Maps & Local SEO</h3><p>ทำให้ธุรกิจเจอง่ายบน Google <span class="en">Make businesses easy to find on Google.</span></p><div class="earn">รายได้ตั้งค่า + รายเดือน</div></div>
-  <div class="idea"><div class="ic">🤖</div><h3>แชทบอท & ระบบจอง AI</h3><p>ติดตั้งผู้ช่วย AI ตอบลูกค้า/รับจอง <span class="en">Install an AI assistant for replies & bookings.</span></p><div class="earn">฿4,000–10,000 / ลูกค้า</div></div>
-  <div class="idea"><div class="ic">🧩</div><h3>สร้างแอปเฉพาะทางร่วมกัน</h3><p>เช่น เดลิเวอรี จอง คอมมูนิตี้ — เราสร้างให้ <span class="en">e.g. delivery, booking, community — we build it.</span></p><div class="earn">โปรเจกต์ใหญ่ รายได้สูง</div></div>
-  <div class="idea"><div class="ic">🎥</div><h3>คอนเทนต์ & วิดีโอสั้น</h3><p>ถ่าย/ตัดต่อให้ธุรกิจ ดึงลูกค้า <span class="en">Shoot/edit short videos for businesses.</span></p><div class="earn">ต่อชิ้น + แพ็กเกจ</div></div>
-  <div class="idea"><div class="ic">📈</div><h3>เทรดกับ BlackEagle</h3><p>เรียนเทรดแบบมีคนสอน (มีความเสี่ยง) <span class="en">Learn guided trading (risky).</span></p><div class="earn">เรียนรู้ + ระยะยาว</div></div>
-  <div class="idea"><div class="ic">🤝</div><h3>แนะนำเพื่อน (Referral)</h3><p>แนะนำคนอื่นเข้าร่วม ก็ได้ส่วนแบ่ง <span class="en">Refer others and earn a share.</span></p><div class="earn">ค่าแนะนำ</div></div>
-  <div class="idea"><div class="ic">💡</div><h3>ไอเดียของคุณเอง</h3><p>มีไอเดียธุรกิจ? เรานั่งคิดและสร้างไปกับคุณ <span class="en">Have a business idea? We brainstorm & build it with you.</span></p><div class="earn">พัฒนาร่วมกัน</div></div>
-</div></section>
+<div class="wrap">
+  <div class="conv">
+    <div class="chead"><div class="orb"></div><div>ATLAS<small>ผู้ช่วย AI · ตอบทันที / AI assistant · instant</small></div></div>
+    <div class="cbody" id="cbody"></div>
+    <div class="chips" id="chips"></div>
+    <div class="cfoot"><input id="cin" placeholder="พิมพ์ตอบ หรือถามอะไรก็ได้..."><button id="csend">ส่ง</button></div>
+  </div>
+  <div class="hint">💬 นี่คือ AI จริง — ถามอะไรก็ได้เกี่ยวกับการหารายได้ / This is a real AI — ask anything about earning with us.</div>
+</div>
 
-<section class="wrap"><div class="chathint">💬 มีคำถามหรืออยากคิดไอเดียร่วมกัน? <b>แชทกับ ATLAS</b> ได้ตลอด (ปุ่มมุมขวาล่างในหน้าหลัก) — AI ตอบคุณเป็นภาษาไทยทันที
-  <span class="en" style="display:block;margin-top:6px">Questions or want to brainstorm? Chat with ATLAS anytime (button on the main page) — the AI answers you instantly.</span></div></section>
+<section class="wrap">
+  <div class="eye">All paths in detail</div>
+  <h2>ไอเดียหารายได้ · ละเอียด</h2>
+  <div class="grid">
+    <div class="idea"><div class="top"><div class="ic">🌐</div><h3>เว็บไซต์ให้ธุรกิจท้องถิ่น</h3></div>
+      <div class="row"><b>คืออะไร:</b> สร้างเว็บ AI ให้ร้านอาหาร คาเฟ่ ร้านค้า โรงแรม <span class="en">AI websites for local businesses.</span></div>
+      <div class="row"><b>เริ่มยังไง:</b> เดินคุยกับร้านใกล้บ้าน/ผ่าน LINE โชว์เดโม <span class="en">Talk to nearby shops, show a demo.</span></div>
+      <div class="row"><b>เราให้:</b> เดโมพร้อมโชว์ + เราสร้างเว็บจริงให้ <span class="en">Ready demos + we build the site.</span></div>
+      <div class="earn">฿6,000–13,000 / ลูกค้า + รายเดือน</div></div>
+
+    <div class="idea"><div class="top"><div class="ic">📣</div><h3>ดูแลโซเชียลมีเดีย</h3></div>
+      <div class="row"><b>คืออะไร:</b> คอนเทนต์ + โฆษณา FB/IG/TikTok ให้ธุรกิจ <span class="en">Content & ads for businesses.</span></div>
+      <div class="row"><b>เริ่มยังไง:</b> เสนอแพ็กเกจรายเดือนให้ร้านที่มีเพจอยู่แล้ว <span class="en">Offer a monthly package.</span></div>
+      <div class="row"><b>เราให้:</b> เทมเพลตคอนเทนต์ + AI ช่วยเขียน <span class="en">Templates + AI writing help.</span></div>
+      <div class="earn">฿3,500–13,500 / เดือน (ต่อเนื่อง)</div></div>
+
+    <div class="idea"><div class="top"><div class="ic">🤖</div><h3>แชทบอท & ระบบจอง AI</h3></div>
+      <div class="row"><b>คืออะไร:</b> ผู้ช่วย AI ตอบลูกค้า 24 ชม./รับจอง <span class="en">AI assistant: replies & bookings.</span></div>
+      <div class="row"><b>เริ่มยังไง:</b> เสนอให้ร้านที่ตอบแชทไม่ทัน <span class="en">Offer to busy shops.</span></div>
+      <div class="row"><b>เราให้:</b> ติดตั้ง + ตั้งค่าให้ทั้งหมด <span class="en">We set it all up.</span></div>
+      <div class="earn">฿4,000–10,000 / ลูกค้า</div></div>
+
+    <div class="idea"><div class="top"><div class="ic">🧩</div><h3>สร้างแอปเฉพาะทางร่วมกัน</h3></div>
+      <div class="row"><b>คืออะไร:</b> เดลิเวอรี จอง มาร์เก็ตเพลส คอมมูนิตี้ <span class="en">Delivery, booking, marketplace, community apps.</span></div>
+      <div class="row"><b>เริ่มยังไง:</b> เจอลูกค้าที่มีไอเดีย → เราออกแบบด้วยกัน <span class="en">Find a client with an idea; we design together.</span></div>
+      <div class="row"><b>เราให้:</b> ทีม + AI สร้างแอปจริง <span class="en">Team + AI build the real app.</span></div>
+      <div class="earn">โปรเจกต์ใหญ่ · รายได้สูง</div></div>
+
+    <div class="idea"><div class="top"><div class="ic">📈</div><h3>เทรดกับ BlackEagle</h3></div>
+      <div class="row"><b>คืออะไร:</b> เรียนเทรดคริปโตบน Binance ด้วยบอท (มีความเสี่ยง) <span class="en">Guided crypto trading with bots (risky).</span></div>
+      <div class="row"><b>เริ่มยังไง:</b> เรียนคอร์สเร่งรัด → ฝึก backtest → เริ่มเล็ก <span class="en">Crash course → backtest → start small.</span></div>
+      <div class="row"><b>เราให้:</b> Christian สอน 1:1 + คู่มือ <span class="en">1:1 teaching + guide.</span></div>
+      <div class="earn">เรียนรู้ · ระยะยาว (ไม่การันตี)</div></div>
+
+    <div class="idea"><div class="top"><div class="ic">💡</div><h3>ไอเดียของคุณเอง</h3></div>
+      <div class="row"><b>คืออะไร:</b> อะไรก็ได้ที่คุณรัก — ร้าน บริการ แอป <span class="en">Anything you love — shop, service, app.</span></div>
+      <div class="row"><b>เริ่มยังไง:</b> คุยกับ ATLAS ด้านบน หรือบอก Christian <span class="en">Chat with ATLAS above, or tell Christian.</span></div>
+      <div class="row"><b>เราให้:</b> ช่วยคิด วางแผน และสร้างไปด้วยกัน <span class="en">We brainstorm, plan & build it with you.</span></div>
+      <div class="earn">พัฒนาร่วมกัน</div></div>
+  </div>
+</section>
 
 <section class="wrap"><div class="final">
   <div class="kick">Let's build it together</div>
-  <h2>มาคิดไอเดียหารายได้ของคุณด้วยกัน</h2>
-  <p>บอกเราว่าคุณถนัดหรือชอบอะไร แล้วเราจะออกแบบทางหารายได้ที่เหมาะกับคุณที่สุด — พร้อมเครื่องมือ AI และการสนับสนุนเต็มที่
-    <span class="en">Tell us what you're good at or love, and we design the best earning path for you — with AI tools and full support.</span></p>
-  <a class="btn" href="./index.html#join">เริ่มเลย · Get started →</a>
+  <h2>พร้อมเริ่มหรือยัง?</h2>
+  <p>คุยกับ ATLAS ด้านบนเพื่อหาทางที่ใช่ หรือสมัครเลย แล้วเราเริ่มลูกค้ารายแรกด้วยกัน
+    <span class="en">Chat with ATLAS above to find your path, or sign up now and we start your first customer together.</span></p>
+  <a class="btn" href="./index.html#join">สมัครเลย · Join now →</a>
 </div></section>
 
 <footer>EUPHENA × ATLAS · christian@euphena.com · สร้างด้วย ATLAS</footer>
+
 <script>
+const CHAT_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-chat";
+const EVENT_URL="https://prniwlzrcejarrltxftd.supabase.co/functions/v1/atlas-partner-event";
+const ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBybml3bHpyY2VqYXJybHR4ZnRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMTQxMjEsImV4cCI6MjA5NTc5MDEyMX0.22qFWQbHPoLjgH3OBGRkon8i4iO8jVedXWtRxzxVc54";
+const SID=(function(){try{let s=localStorage.getItem('atlas_sid');if(!s){s=Math.random().toString(36).slice(2)+Date.now().toString(36);localStorage.setItem('atlas_sid',s);}return s;}catch(_){return 'anon'+Date.now();}})();
+function ev(e,d){try{fetch(EVENT_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({session_id:SID,lang:'th',event:e,detail:(d||'').toString()}),keepalive:true});}catch(_){}}
+const body=document.getElementById('cbody'),chips=document.getElementById('chips'),input=document.getElementById('cin'),send=document.getElementById('csend');
+let hist=[];
+function add(t,who){const d=document.createElement('div');d.className='msg '+(who==='u'?'u':'a');d.textContent=t;body.appendChild(d);body.scrollTop=body.scrollHeight;return d;}
+const START=['ชอบคุยกับคน','สายครีเอทีฟ','ชอบเทคโนโลยี','สนใจตลาดเงิน','มีไอเดียของตัวเอง','ยังไม่แน่ใจ'];
+function showChips(list){chips.innerHTML='';list.forEach(t=>{const b=document.createElement('span');b.className='chip';b.textContent=t;b.onclick=()=>{chips.innerHTML='';ev('interest',t);ask(t);};chips.appendChild(b);});}
+add('สวัสดีค่ะ! ฉันคือ ATLAS 😊 อยากช่วยหาทางหารายได้ที่เหมาะกับคุณที่สุด บอกฉันหน่อยว่าคุณชอบอะไร หรือถนัดด้านไหนคะ?','a');
+showChips(START);
+ev('ideas_conv_open');
+async function ask(m){if(!m)return;add(m,'u');hist.push({role:'user',text:m});input.value='';ev('chat_msg',m.slice(0,90));const w=add('…','a');try{const r=await fetch(CHAT_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':ANON,'Authorization':'Bearer '+ANON},body:JSON.stringify({message:m,lang:'th',session_id:SID,history:hist})});const d=await r.json();w.textContent=d.reply||'...';hist.push({role:'atlas',text:d.reply||''});}catch(_){w.textContent='ขออภัย ลองใหม่นะคะ';}body.scrollTop=body.scrollHeight;}
+send.onclick=()=>ask(input.value.trim());
+input.addEventListener('keydown',e=>{if(e.key==='Enter')ask(input.value.trim());});
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.12});
 document.querySelectorAll('.idea').forEach(el=>io.observe(el));
-(function(){const c=document.getElementById('bg'),x=c.getContext('2d');let w,h,P;function rs(){w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:80},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.3,s:Math.random()*.3+.05,o:Math.random()*.5+.2}));}rs();addEventListener('resize',rs);(function loop(){x.clearRect(0,0,w,h);P.forEach(p=>{p.y-=p.s;if(p.y<-5){p.y=h+5;p.x=Math.random()*w;}x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(120,200,255,'+p.o+')';x.fill();});requestAnimationFrame(loop);})();})();
+(function(){const c=document.getElementById('bg'),x=c.getContext('2d');let w,h,P;function rs(){w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:70},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.3,s:Math.random()*.3+.05,o:Math.random()*.5+.2}));}rs();addEventListener('resize',rs);(function loop(){x.clearRect(0,0,w,h);P.forEach(p=>{p.y-=p.s;if(p.y<-5){p.y=h+5;p.x=Math.random()*w;}x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(120,200,255,'+p.o+')';x.fill();});requestAnimationFrame(loop);})();})();
 </script>
 </body></html>
