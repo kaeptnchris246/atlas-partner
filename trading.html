@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คู่มือเทรดสำหรับมือใหม่ · Trading Guide — Euphena × ATLAS</title>
+<style>
+  :root{--bg:#05070f;--cyan:#22d3ee;--violet:#a78bff;--pv:#7c3aed;--gold:#f5c451;--red:#ff7a6b;--ink:#eaf2ff;--mut:#93a4c8;--card:rgba(255,255,255,.04);--line:rgba(120,160,255,.14)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:"Helvetica Neue",Arial,"Thonburi","Leelawadee UI",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.65}
+  #bg{position:fixed;inset:0;z-index:0}
+  .glow{position:fixed;z-index:1;pointer-events:none;filter:blur(90px);opacity:.45}
+  .g1{top:-10%;left:-8%;width:46vw;height:46vw;background:radial-gradient(circle,rgba(245,196,81,.22),transparent 60%)}
+  .g2{bottom:-15%;right:-10%;width:52vw;height:52vw;background:radial-gradient(circle,rgba(124,58,237,.3),transparent 60%)}
+  .wrap{position:relative;z-index:3;max-width:900px;margin:0 auto;padding:0 24px}
+  nav{position:fixed;top:0;left:0;right:0;z-index:20;backdrop-filter:blur(12px);background:linear-gradient(180deg,rgba(5,7,15,.88),rgba(5,7,15,.3));border-bottom:1px solid var(--line)}
+  .nav-in{max-width:900px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:800;letter-spacing:2px;font-size:14px}.brand b{background:linear-gradient(90deg,var(--gold),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .back{color:var(--mut);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:8px 15px;border-radius:999px}.back:hover{color:var(--gold);border-color:var(--gold)}
+  header{padding:140px 0 30px;text-align:center}
+  .kick{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:7px 15px;margin-bottom:22px;background:rgba(245,196,81,.06)}
+  h1{font-size:clamp(32px,6vw,58px);line-height:1.08;font-weight:800;letter-spacing:-1px}
+  h1 .g{background:linear-gradient(90deg,var(--gold),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .en{color:var(--mut)}
+  header .sub{max-width:620px;margin:20px auto 0;font-size:17px;color:var(--mut)}
+  header .sub .en{display:block;font-size:14px;margin-top:6px}
+  .risk{background:rgba(255,122,107,.09);border:1px solid rgba(255,122,107,.4);border-radius:16px;padding:18px 20px;margin:28px 0;font-size:14.5px}
+  .risk b{color:var(--red)}.risk .en{display:block;color:var(--mut);font-size:13px;margin-top:6px}
+  section{padding:34px 0;position:relative;z-index:3}
+  .eye{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:12px;font-weight:700}
+  h2{font-size:clamp(24px,4vw,34px);font-weight:800;margin-top:8px}
+  .lead{color:var(--mut);margin-top:12px;font-size:16px}.lead .en{display:block;font-size:13.5px;margin-top:5px}
+  .step{display:grid;grid-template-columns:52px 1fr;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:14px;opacity:0;transform:translateY(24px);transition:.6s cubic-bezier(.2,.7,.2,1)}
+  .step.in{opacity:1;transform:none}
+  .n{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--pv));color:#1a1206;font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:18px;font-weight:800}
+  .step p{color:var(--mut);font-size:14.5px;margin-top:6px}.step p .en{display:block;color:#7f8ca8;font-size:13px;margin-top:4px}
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+  @media(max-width:640px){.rules{grid-template-columns:1fr}.step{grid-template-columns:1fr}}
+  .rule{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card)}
+  .rule.do{border-color:rgba(52,226,176,.35)}.rule.dont{border-color:rgba(255,122,107,.35)}
+  .rule h4{font-size:15px}.rule.do h4{color:#34e2b0}.rule.dont h4{color:var(--red)}
+  .rule ul{list-style:none;margin-top:10px}.rule li{font-size:14px;color:var(--mut);padding:5px 0 5px 20px;position:relative}
+  .rule.do li:before{content:"✓";position:absolute;left:0;color:#34e2b0;font-weight:800}
+  .rule.dont li:before{content:"✕";position:absolute;left:0;color:var(--red);font-weight:800}
+  .final{text-align:center;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(245,196,81,.1));border:1px solid var(--line);border-radius:24px;padding:52px 26px;margin:34px 0 50px}
+  .final h2{font-size:clamp(24px,4.5vw,38px)}
+  .final p{color:var(--mut);max-width:560px;margin:14px auto 0}.final p .en{display:block;font-size:13.5px;margin-top:6px}
+  .btn{display:inline-block;margin-top:24px;background:linear-gradient(135deg,var(--gold),var(--pv));color:#1a1206;font-weight:800;padding:14px 28px;border-radius:12px;text-decoration:none}
+  footer{border-top:1px solid var(--line);padding:24px;color:var(--mut);font-size:12px;text-align:center;position:relative;z-index:3;max-width:900px;margin:0 auto}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas><div class="glow g1"></div><div class="glow g2"></div>
+
+<nav><div class="nav-in"><div class="brand">EUPHENA <b>× ATLAS</b></div><a class="back" href="./index.html">← กลับ / Back</a></div></nav>
+
+<header><div class="wrap">
+  <span class="kick">Trading Crash Course · Step by Step</span>
+  <h1>เทรดคริปโต <span class="g">ทีละขั้น</span></h1>
+  <h1 class="en" style="font-size:clamp(17px,3vw,24px);margin-top:8px">Crypto trading — we take you by the hand</h1>
+  <p class="sub">ไม่ต้องมีพื้นฐานมาก่อน เราจะพาคุณไปทีละขั้น จากศูนย์จนเข้าใจ และมี Christian คอยสอนและช่วยจริง ๆ
+    <span class="en">No prior knowledge needed. We guide you step by step from zero — and Christian teaches and supports you personally.</span></p>
+</div></header>
+
+<div class="wrap">
+  <div class="risk">⚠️ <b>อ่านก่อนเริ่ม:</b> การเทรดมีความเสี่ยงสูง คุณอาจสูญเสียเงินได้ ใช้เฉพาะเงินที่คุณพร้อมจะเสียได้เท่านั้น หน้านี้เป็น “ความรู้เพื่อการเรียนรู้” ไม่ใช่คำแนะนำการลงทุน และไม่มีการรับประกันกำไรใด ๆ
+    <span class="en">⚠️ Read first: Trading is high-risk — you can lose money. Only use money you can afford to lose. This page is educational, not financial advice, and there is no guarantee of profit.</span></div>
+</div>
+
+<section class="wrap">
+  <div class="eye">Step 1 · พื้นฐาน</div>
+  <h2>เข้าใจก่อนว่า “เทรด” คืออะไร</h2>
+  <p class="lead">การเทรดคือการซื้อสินทรัพย์ (เช่น คริปโต) ในราคาหนึ่ง แล้วขายในอีกราคาหนึ่ง กำไรคือส่วนต่าง — แต่ราคาขึ้นลงได้ตลอด จึงมีทั้งกำไรและขาดทุน คำที่ควรรู้: Exchange (กระดานเทรด), Order (คำสั่งซื้อ/ขาย), Spread (ส่วนต่างราคาซื้อ-ขาย), Volatility (ความผันผวน)
+    <span class="en">Trading means buying an asset (e.g. crypto) at one price and selling at another — the profit is the difference, but prices move up and down, so there's both gain and loss. Key terms: Exchange, Order, Spread, Volatility.</span></p>
+</section>
+
+<section class="wrap">
+  <div class="eye">Step 2 · หัวใจสำคัญ</div>
+  <h2>บริหารความเสี่ยงก่อนคิดเรื่องกำไร</h2>
+  <p class="lead">มืออาชีพไม่ได้ชนะทุกไม้ แต่พวกเขา “คุมความเสี่ยง” เก่ง กฎง่าย ๆ: อย่าใส่เงินทั้งหมดในไม้เดียว, กำหนดจุดตัดขาดทุน (stop-loss) เสมอ, และเสี่ยงต่อไม้ให้น้อย (เช่น 1–2% ของเงินทุน)
+    <span class="en">Pros don't win every trade — they manage risk well. Simple rules: never put everything in one trade, always set a stop-loss, and risk only a small amount per trade (e.g. 1–2% of your capital).</span></p>
+</section>
+
+<section class="wrap">
+  <div class="eye">BlackEagle × Binance</div>
+  <h2>บอทของเราทำงานบน Binance</h2>
+  <p class="lead">เราเทรดบน <b>Binance</b> — กระดานเทรดคริปโตที่ใหญ่ที่สุดในโลก มีเหรียญเยอะที่สุด สภาพคล่องสูงสุด และเครื่องมือมากที่สุด เราจึง “ทำอะไรได้มากที่สุด” ที่นั่น
+    <span class="en">We trade on <b>Binance</b> — the world's largest crypto exchange, with the most coins, deepest liquidity and the most tools, so we can do the most there.</span></p>
+  <div class="step" style="margin-top:18px"><div class="n">🔗</div><div><h3>เชื่อมต่ออย่างปลอดภัย</h3><p>BlackEagle เชื่อมกับบัญชี Binance ของคุณผ่าน API key — ใช้แบบ “เทรดได้แต่ถอนเงินไม่ได้” เงินอยู่ในบัญชีคุณเสมอ <span class="en">BlackEagle connects to your own Binance account via an API key — use a "trade-only, no-withdrawal" key. Your funds always stay in your account.</span></p></div></div>
+  <div class="step"><div class="n">⚙️</div><div><h3>Grid Trading คืออะไร</h3><p>บอทวางคำสั่งซื้อ-ขายหลายไม้ในช่วงราคาหนึ่ง เมื่อราคาแกว่งขึ้น-ลง บอทก็ทำกำไรจากส่วนต่างโดยอัตโนมัติ 24 ชม. เหมาะกับตลาดที่แกว่งในกรอบ <span class="en">Grid trading: the bot places many buy/sell orders across a price range; as price swings up and down it captures the differences automatically, 24/7. Best in ranging markets.</span></p></div></div>
+  <div class="step"><div class="n">🧪</div><div><h3>ทดสอบก่อนด้วย Backtest</h3><p>ก่อนใช้เงินจริง เราทดสอบกลยุทธ์กับข้อมูลราคาย้อนหลัง เพื่อดูว่ามันเคยทำงานได้ดีแค่ไหน (ผลย้อนหลังไม่รับประกันอนาคต) <span class="en">Before real money, we backtest the strategy on historical prices to see how it would have performed (past results don't guarantee the future).</span></p></div></div>
+  <div class="step"><div class="n">🛡️</div><div><h3>เริ่มเล็ก ควบคุมความเสี่ยง</h3><p>เริ่มด้วยเงินก้อนเล็ก ตั้งขอบเขตความเสี่ยงของบอทชัดเจน และมี Christian ช่วยตั้งค่าและดูแล <span class="en">Start small, set the bot's risk limits clearly, and Christian helps configure and supervise.</span></p></div></div>
+
+  <div style="height:20px"></div>
+  <div class="eye">เส้นทางของคุณ · Your Path</div>
+  <h2>6 ขั้น จากมือใหม่สู่มั่นใจ</h2>
+  <div class="step"><div class="n">1</div><div><h3>เรียนพื้นฐาน</h3><p>ทำความเข้าใจคำศัพท์ กระดานเทรด และวิธีอ่านกราฟเบื้องต้น <span class="en">Learn the basics — terms, exchanges, reading a simple chart.</span></p></div></div>
+  <div class="step"><div class="n">2</div><div><h3>เข้าใจการบริหารเงินและความเสี่ยง</h3><p>กำหนดว่าจะเสี่ยงเท่าไร ตั้ง stop-loss และไม่ไล่ตามราคา <span class="en">Understand money & risk management — position size, stop-loss, don't chase price.</span></p></div></div>
+  <div class="step"><div class="n">3</div><div><h3>ฝึกก่อนด้วยเงินจำลอง</h3><p>ฝึกด้วย paper trading หรือ backtest ของ BlackEagle — ยังไม่ใช้เงินจริง <span class="en">Practice first with paper trading / BlackEagle backtesting — no real money yet.</span></p></div></div>
+  <div class="step"><div class="n">4</div><div><h3>เริ่มด้วยเงินก้อนเล็กมาก</h3><p>เมื่อพร้อม เริ่มด้วยเงินที่เสียได้เท่านั้น จำนวนน้อย ๆ <span class="en">Start very small — only spare money you can afford to lose.</span></p></div></div>
+  <div class="step"><div class="n">5</div><div><h3>ใช้บอท BlackEagle แบบมีคนสอน</h3><p>ให้บอทรันกลยุทธ์ (เช่น กริด) โดย Christian ช่วยตั้งค่าและดูแลไปด้วยกัน <span class="en">Use BlackEagle bots with guidance — Christian helps set up and supervise together.</span></p></div></div>
+  <div class="step"><div class="n">6</div><div><h3>ทบทวนและเรียนรู้ต่อเนื่อง</h3><p>จดบันทึกทุกไม้ ดูว่าอะไรได้ผล/ไม่ได้ผล แล้วค่อย ๆ พัฒนา <span class="en">Review & keep learning — journal every trade, see what works, improve slowly.</span></p></div></div>
+</section>
+
+<section class="wrap">
+  <div class="eye">กฎทอง · Golden Rules</div>
+  <h2>ทำ และ ไม่ทำ</h2>
+  <div class="rules">
+    <div class="rule do"><h4>ควรทำ · DO</h4><ul>
+      <li>ใช้เฉพาะเงินที่เสียได้ · Only spare money</li>
+      <li>ตั้ง stop-loss เสมอ · Always set stop-loss</li>
+      <li>ฝึกก่อนด้วยเงินจำลอง · Practice first</li>
+      <li>เรียนรู้ต่อเนื่อง · Keep learning</li>
+    </ul></div>
+    <div class="rule dont"><h4>ไม่ควรทำ · DON'T</h4><ul>
+      <li>อย่ากู้เงินมาเทรด · Never borrow to trade</li>
+      <li>อย่าไล่ตามกระแส/FOMO · No hype / FOMO</li>
+      <li>อย่าเทรดด้วยอารมณ์ · Don't trade on emotion</li>
+      <li>อย่าเชื่อคำสัญญากำไรแน่นอน · No "guaranteed profit"</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="wrap"><div class="final">
+  <div class="kick">1:1 Guidance</div>
+  <h2>Christian สอนคุณเอง ทีละขั้น</h2>
+  <p>คุณไม่ต้องเรียนคนเดียว — เราจับมือพาไป เริ่มจากพื้นฐาน ฝึกด้วยเงินจำลอง แล้วค่อยไปทีละก้าวอย่างปลอดภัย
+    <span class="en">You don't learn alone — we take you by the hand: start with basics, practice risk-free, then move forward one safe step at a time.</span></p>
+  <a class="btn" href="./index.html#join">สมัครและเริ่มเรียน · Join & start learning →</a>
+</div></section>
+
+<footer>การเทรดมีความเสี่ยง อาจสูญเสียเงินลงทุนทั้งหมด · หน้านี้เพื่อการเรียนรู้ ไม่ใช่คำแนะนำการลงทุน · Trading is risky and you may lose all invested capital. Educational only, not financial advice. · EUPHENA × ATLAS</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.15});
+document.querySelectorAll('.step').forEach(el=>io.observe(el));
+(function(){const c=document.getElementById('bg'),x=c.getContext('2d');let w,h,P;function rs(){w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:70},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.3,s:Math.random()*.3+.05,o:Math.random()*.5+.2}));}rs();addEventListener('resize',rs);(function loop(){x.clearRect(0,0,w,h);P.forEach(p=>{p.y-=p.s;if(p.y<-5){p.y=h+5;p.x=Math.random()*w;}x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(245,196,81,'+p.o*.7+')';x.fill();});requestAnimationFrame(loop);})();})();
+</script>
+</body>
+</html>
